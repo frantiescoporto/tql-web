@@ -78,7 +78,7 @@ export default function SobrePage() {
         <h2>Quer acesso aos robôs?</h2>
         <p>Entre em contato para conhecer os planos de assinatura e como integrar ao seu trading.</p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer"
+          <a href="https://wa.me/5553999793260" target="_blank" rel="noopener noreferrer"
             className="btn primary" style={{ fontSize: 14, padding: '10px 24px', textDecoration: 'none' }}>
             💬 Falar no WhatsApp
           </a>

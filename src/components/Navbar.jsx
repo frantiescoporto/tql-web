@@ -42,7 +42,7 @@ export default function Navbar({ theme, toggleTheme }) {
           {theme === 'dark' ? '☀️' : '🌙'}
         </button>
         <a
-          href="https://wa.me/5500000000000"
+          href="https://wa.me/5553999793260"
           target="_blank"
           rel="noopener noreferrer"
           className="btn primary"
