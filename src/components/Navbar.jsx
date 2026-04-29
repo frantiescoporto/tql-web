@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 
 export default function Navbar({ theme, toggleTheme }) {
@@ -7,11 +7,12 @@ export default function Navbar({ theme, toggleTheme }) {
   return (
     <nav className="navbar">
       <a className="navbar-brand" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-          <rect width="22" height="22" rx="6" fill="var(--accent)" />
-          <path d="M4 16 L8 10 L11 13 L14 8 L18 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-        Trade Quant<span>Lab</span>
+        <img
+          src="/logo.png"
+          alt="Trade Quant Lab"
+          style={{ height: 32, width: 32, objectFit: 'contain' }}
+        />
+        Trade Quant <span>Lab</span>
       </a>
 
       <div className="navbar-links">
