@@ -50,14 +50,14 @@
     "robots_config": "{\"robots\":[{\"robotId\":7,\"lots\":1},{\"robotId\":31,\"lots\":1},{\"robotId\":1,\"lots\":1}],\"multiplier\":3,\"targetMonthly\":\"\"}"
   },
   {
+    "id": 41,
+    "name": "GESTÃO_01",
+    "robots_config": "{\"robots\":[{\"robotId\":49,\"lots\":11},{\"robotId\":59,\"lots\":9},{\"robotId\":60,\"lots\":13},{\"robotId\":48,\"lots\":9},{\"robotId\":50,\"lots\":8},{\"robotId\":39,\"lots\":16},{\"robotId\":11,\"lots\":13},{\"robotId\":12,\"lots\":7},{\"robotId\":31,\"lots\":28},{\"robotId\":22,\"lots\":16},{\"robotId\":25,\"lots\":13},{\"robotId\":30,\"lots\":15},{\"robotId\":26,\"lots\":10},{\"robotId\":32,\"lots\":12},{\"robotId\":33,\"lots\":13},{\"robotId\":28,\"lots\":5},{\"robotId\":34,\"lots\":9},{\"robotId\":14,\"lots\":7},{\"robotId\":17,\"lots\":9},{\"robotId\":3,\"lots\":2},{\"robotId\":10,\"lots\":5},{\"robotId\":98,\"lots\":3},{\"robotId\":52,\"lots\":5},{\"robotId\":51,\"lots\":9},{\"robotId\":62,\"lots\":9}],\"multiplier\":5,\"targetMonthly\":\"\"}"
+  },
+  {
     "id": 33,
     "name": "INICIANTE ALAVANCADO",
     "robots_config": "{\"robots\":[{\"robotId\":31,\"lots\":1},{\"robotId\":22,\"lots\":1},{\"robotId\":17,\"lots\":1},{\"robotId\":1,\"lots\":1},{\"robotId\":7,\"lots\":1}],\"multiplier\":2,\"targetMonthly\":\"\"}"
-  },
-  {
-    "id": 41,
-    "name": "MARRUA QUANT",
-    "robots_config": "{\"robots\":[{\"robotId\":49,\"lots\":11},{\"robotId\":59,\"lots\":9},{\"robotId\":60,\"lots\":13},{\"robotId\":48,\"lots\":9},{\"robotId\":50,\"lots\":8},{\"robotId\":39,\"lots\":16},{\"robotId\":11,\"lots\":13},{\"robotId\":12,\"lots\":7},{\"robotId\":31,\"lots\":28},{\"robotId\":22,\"lots\":16},{\"robotId\":25,\"lots\":13},{\"robotId\":30,\"lots\":15},{\"robotId\":26,\"lots\":10},{\"robotId\":32,\"lots\":12},{\"robotId\":33,\"lots\":13},{\"robotId\":28,\"lots\":5},{\"robotId\":34,\"lots\":9},{\"robotId\":14,\"lots\":7},{\"robotId\":17,\"lots\":9},{\"robotId\":3,\"lots\":2},{\"robotId\":10,\"lots\":5},{\"robotId\":98,\"lots\":3},{\"robotId\":52,\"lots\":5},{\"robotId\":51,\"lots\":9},{\"robotId\":62,\"lots\":9}],\"multiplier\":5,\"targetMonthly\":\"\"}"
   },
   {
     "id": 45,
