@@ -8,6 +8,7 @@ import RobotDetail from './pages/RobotDetail.jsx'
 import PortfoliosPage from './pages/PortfoliosPage.jsx'
 import PortfolioDetail from './pages/PortfolioDetail.jsx'
 import SobrePage from './pages/SobrePage.jsx'
+import MentoradosPage from './pages/MentoradosPage.jsx'
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/portfolios" element={<PortfoliosPage />} />
           <Route path="/portfolios/:id" element={<PortfolioDetail />} />
           <Route path="/sobre" element={<SobrePage />} />
+          <Route path="/portfolios-recomendados" element={<MentoradosPage />} />
         </Routes>
         <footer className="footer">
           <div>Trade Quant Lab &middot; By Frantiesco Trader | Método 6015</div>

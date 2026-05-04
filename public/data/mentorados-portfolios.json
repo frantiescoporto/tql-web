@@ -1,0 +1,110 @@
+[
+  {
+    "id": 24,
+    "name": "40k profit",
+    "robots_json": "[{\"name\": \"BIT_54\", \"lotes\": 27}, {\"name\": \"WIN_71\", \"lotes\": 8}, {\"name\": \"WDO_34\", \"lotes\": 2}, {\"name\": \"WIN_36\", \"lotes\": 13}, {\"name\": \"WDO_04\", \"lotes\": 2}, {\"name\": \"WIN_37\", \"lotes\": 6}, {\"name\": \"WIN_06\", \"lotes\": 3}, {\"name\": \"WIN_16\", \"lotes\": 6}, {\"name\": \"WIN_22\", \"lotes\": 6}, {\"name\": \"WIN_19\", \"lotes\": 8}, {\"name\": \"WIN_03\", \"lotes\": 11}, {\"name\": \"WIN_33\", \"lotes\": 6}, {\"name\": \"WIN_27\", \"lotes\": 3}, {\"name\": \"WIN_38\", \"lotes\": 6}, {\"name\": \"WIN_07\", \"lotes\": 5}, {\"name\": \"WIN_13_2026\", \"lotes\": 9}, {\"name\": \"WIN_12\", \"lotes\": 5}, {\"name\": \"WIN_19_v2026\", \"lotes\": 11}, {\"name\": \"WIN_25_v2026\", \"lotes\": 16}, {\"name\": \"WIN_84\", \"lotes\": 14}, {\"name\": \"WIN_83\", \"lotes\": 4}, {\"name\": \"WIN_10\", \"lotes\": 7}, {\"name\": \"WIN_91\", \"lotes\": 8}]",
+    "config_versions": "[{\"valid_from\": null, \"robots_json\": \"[{\\\"name\\\": \\\"BIT_54\\\", \\\"lotes\\\": 27}, {\\\"name\\\": \\\"WIN_71\\\", \\\"lotes\\\": 8}, {\\\"name\\\": \\\"WDO_34\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_36\\\", \\\"lotes\\\": 13}, {\\\"name\\\": \\\"WDO_04\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_37\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WIN_06\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_16\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WIN_22\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WIN_19\\\", \\\"lotes\\\": 8}, {\\\"name\\\": \\\"WIN_03\\\", \\\"lotes\\\": 11}, {\\\"name\\\": \\\"WIN_33\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WIN_27\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_38\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WIN_07\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_13_2026\\\", \\\"lotes\\\": 9}, {\\\"name\\\": \\\"WIN_12\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_19_v2026\\\", \\\"lotes\\\": 11}, {\\\"name\\\": \\\"WIN_25_v2026\\\", \\\"lotes\\\": 16}, {\\\"name\\\": \\\"WIN_84\\\", \\\"lotes\\\": 14}, {\\\"name\\\": \\\"WIN_83\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_10\\\", \\\"lotes\\\": 7}, {\\\"name\\\": \\\"WIN_91\\\", \\\"lotes\\\": 8}]\"}]",
+    "capital_inicial": 0,
+    "cor": "#f5a623",
+    "logo": "6015"
+  },
+  {
+    "id": 25,
+    "name": "MISTO 5K",
+    "robots_json": "[{\"name\": \"MT_249\", \"lotes\": 1}, {\"name\": \"MT_217\", \"lotes\": 1}, {\"name\": \"BIT_54\", \"lotes\": 5}, {\"name\": \"WIN_71\", \"lotes\": 1}, {\"name\": \"WIN_36\", \"lotes\": 2}, {\"name\": \"MT_221\", \"lotes\": 1}, {\"name\": \"WIN_37\", \"lotes\": 1}]",
+    "config_versions": "[{\"valid_from\": null, \"robots_json\": \"[{\\\"name\\\": \\\"MT_249\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"MT_217\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"BIT_54\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_71\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_36\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"MT_221\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_37\\\", \\\"lotes\\\": 1}]\"}]",
+    "capital_inicial": 0,
+    "cor": "#4f8ef7",
+    "logo": "6015"
+  },
+  {
+    "id": 26,
+    "name": "NELO APROVADAS 10K",
+    "robots_json": "[{\"name\": \"BIT_54\", \"lotes\": 11}, {\"name\": \"WIN_71\", \"lotes\": 3}, {\"name\": \"WDO_34\", \"lotes\": 1}, {\"name\": \"WIN_36\", \"lotes\": 5}, {\"name\": \"WIN_37\", \"lotes\": 2}, {\"name\": \"WIN_06\", \"lotes\": 1}, {\"name\": \"WIN_16\", \"lotes\": 2}, {\"name\": \"WIN_22\", \"lotes\": 2}, {\"name\": \"WIN_19\", \"lotes\": 3}, {\"name\": \"WIN_12\", \"lotes\": 2}]",
+    "config_versions": "[{\"valid_from\": null, \"robots_json\": \"[{\\\"name\\\": \\\"BIT_54\\\", \\\"lotes\\\": 11}, {\\\"name\\\": \\\"WIN_71\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WDO_34\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_36\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_37\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_06\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_16\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_22\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_19\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_12\\\", \\\"lotes\\\": 2}]\"}]",
+    "capital_inicial": 0,
+    "cor": "#34d47e",
+    "logo": "6015"
+  },
+  {
+    "id": 17,
+    "name": "ON_6K_VALHALLA",
+    "robots_json": "[{\"name\": \"MT_249\", \"lotes\": 1}, {\"name\": \"MT_217\", \"lotes\": 1}, {\"name\": \"MT_251\", \"lotes\": 1}, {\"name\": \"MT_250\", \"lotes\": 1}, {\"name\": \"MT_240\", \"lotes\": 1}, {\"name\": \"MT_248\", \"lotes\": 1}, {\"name\": \"g15 -Strategy_0_243327 - RETORNO A MEDIA\", \"lotes\": 1}, {\"name\": \"g15 - Strategy_0_166904 - retorno a m\\u00e9dia\", \"lotes\": 1}, {\"name\": \"MT_231\", \"lotes\": 1}, {\"name\": \"MT_253\", \"lotes\": 1}, {\"name\": \"MT_242\", \"lotes\": 1}, {\"name\": \"MT_221\", \"lotes\": 1}]",
+    "config_versions": "[{\"valid_from\": null, \"robots_json\": \"[{\\\"name\\\": \\\"MT_249\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"MT_217\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"MT_251\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"MT_250\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"MT_240\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"MT_248\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"g15 -Strategy_0_243327 - RETORNO A MEDIA\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"g15 - Strategy_0_166904 - retorno a m\\\\u00e9dia\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"MT_231\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"MT_253\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"MT_242\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"MT_221\\\", \\\"lotes\\\": 1}]\"}]",
+    "capital_inicial": 0,
+    "cor": "#f06060",
+    "logo": "6015"
+  },
+  {
+    "id": 21,
+    "name": "ON_KATTEGAT",
+    "robots_json": "[{\"name\": \"MT_033\", \"lotes\": 1}, {\"name\": \"MT_036\", \"lotes\": 1}, {\"name\": \"MT_232\", \"lotes\": 1}, {\"name\": \"WIN_06\", \"lotes\": 1}]",
+    "config_versions": "[{\"valid_from\": null, \"robots_json\": \"[{\\\"name\\\": \\\"MT_033\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"MT_036\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"MT_232\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_06\\\", \\\"lotes\\\": 1}]\"}]",
+    "capital_inicial": 0,
+    "cor": "#a855f7",
+    "logo": "6015"
+  },
+  {
+    "id": 9,
+    "name": "PROFIT 10K",
+    "robots_json": "[{\"name\": \"WIN_22\", \"lotes\": 2}, {\"name\": \"WIN_36\", \"lotes\": 5}, {\"name\": \"WIN_06\", \"lotes\": 1}, {\"name\": \"BIT_54\", \"lotes\": 9}, {\"name\": \"WIN_19\", \"lotes\": 3}, {\"name\": \"WIN_16\", \"lotes\": 2}, {\"name\": \"WIN_27\", \"lotes\": 1}, {\"name\": \"WIN_33\", \"lotes\": 2}, {\"name\": \"WIN_07\", \"lotes\": 2}, {\"name\": \"WIN_12\", \"lotes\": 2}, {\"name\": \"WIN_84\", \"lotes\": 4}, {\"name\": \"WIN_38\", \"lotes\": 2}, {\"name\": \"WIN_37\", \"lotes\": 2}, {\"name\": \"WIN_71\", \"lotes\": 3}, {\"name\": \"WDO_34\", \"lotes\": 1}]",
+    "config_versions": "[{\"valid_from\": null, \"robots_json\": \"[{\\\"name\\\": \\\"WIN_22\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_36\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_06\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"BIT_54\\\", \\\"lotes\\\": 9}, {\\\"name\\\": \\\"WIN_19\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_16\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_27\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_33\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_07\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_12\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_84\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_38\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_37\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_71\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WDO_34\\\", \\\"lotes\\\": 1}]\"}]",
+    "capital_inicial": 0,
+    "cor": "#06b6d4",
+    "logo": "6015"
+  },
+  {
+    "id": 18,
+    "name": "PROFIT 15K",
+    "robots_json": "[{\"name\": \"BIT_54\", \"lotes\": 13}, {\"name\": \"WIN_71\", \"lotes\": 5}, {\"name\": \"WDO_34\", \"lotes\": 1}, {\"name\": \"WIN_36\", \"lotes\": 7}, {\"name\": \"WIN_12\", \"lotes\": 3}, {\"name\": \"WIN_19_v2026\", \"lotes\": 2}, {\"name\": \"WIN_37\", \"lotes\": 3}, {\"name\": \"WIN_06\", \"lotes\": 2}, {\"name\": \"WIN_16\", \"lotes\": 4}, {\"name\": \"WIN_22\", \"lotes\": 3}, {\"name\": \"WIN_19\", \"lotes\": 4}, {\"name\": \"WIN_33\", \"lotes\": 3}, {\"name\": \"WIN_27\", \"lotes\": 2}, {\"name\": \"WIN_38\", \"lotes\": 4}, {\"name\": \"WIN_07\", \"lotes\": 3}, {\"name\": \"WDO_05\", \"lotes\": 3}]",
+    "config_versions": "[{\"valid_from\": null, \"robots_json\": \"[{\\\"name\\\": \\\"BIT_54\\\", \\\"lotes\\\": 13}, {\\\"name\\\": \\\"WIN_71\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WDO_34\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_36\\\", \\\"lotes\\\": 7}, {\\\"name\\\": \\\"WIN_12\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_19_v2026\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_37\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_06\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_16\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_22\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_19\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_33\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_27\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_38\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_07\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WDO_05\\\", \\\"lotes\\\": 3}]\"}]",
+    "capital_inicial": 0,
+    "cor": "#ec4899",
+    "logo": "6015"
+  },
+  {
+    "id": 19,
+    "name": "PROFIT 20K",
+    "robots_json": "[{\"name\": \"BIT_54\", \"lotes\": 18}, {\"name\": \"WIN_71\", \"lotes\": 6}, {\"name\": \"WDO_34\", \"lotes\": 2}, {\"name\": \"WIN_36\", \"lotes\": 9}, {\"name\": \"WIN_37\", \"lotes\": 5}, {\"name\": \"WIN_06\", \"lotes\": 3}, {\"name\": \"WIN_16\", \"lotes\": 5}, {\"name\": \"WIN_22\", \"lotes\": 4}, {\"name\": \"WIN_19\", \"lotes\": 5}, {\"name\": \"WIN_33\", \"lotes\": 5}, {\"name\": \"WIN_27\", \"lotes\": 3}, {\"name\": \"WIN_38\", \"lotes\": 5}, {\"name\": \"WIN_07\", \"lotes\": 4}, {\"name\": \"WIN_12\", \"lotes\": 4}, {\"name\": \"WIN_19_v2026\", \"lotes\": 3}, {\"name\": \"WIN_25_v2026\", \"lotes\": 4}, {\"name\": \"WIN_83\", \"lotes\": 1}, {\"name\": \"WIN_02\", \"lotes\": 3}, {\"name\": \"WIN_41\", \"lotes\": 3}, {\"name\": \"WIN_17\", \"lotes\": 3}, {\"name\": \"WDO_05\", \"lotes\": 5}]",
+    "config_versions": "[{\"valid_from\": null, \"robots_json\": \"[{\\\"name\\\": \\\"BIT_54\\\", \\\"lotes\\\": 18}, {\\\"name\\\": \\\"WIN_71\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WDO_34\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_36\\\", \\\"lotes\\\": 9}, {\\\"name\\\": \\\"WIN_37\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_06\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_16\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_22\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_19\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_33\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_27\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_38\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_07\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_12\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_19_v2026\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_25_v2026\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_83\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_02\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_41\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_17\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WDO_05\\\", \\\"lotes\\\": 5}]\"}]",
+    "capital_inicial": 0,
+    "cor": "#ffd700",
+    "logo": "6015"
+  },
+  {
+    "id": 20,
+    "name": "PROFIT 25K",
+    "robots_json": "[{\"name\": \"BIT_54\", \"lotes\": 24}, {\"name\": \"WIN_71\", \"lotes\": 8}, {\"name\": \"WDO_34\", \"lotes\": 3}, {\"name\": \"WIN_36\", \"lotes\": 13}, {\"name\": \"WIN_37\", \"lotes\": 6}, {\"name\": \"WIN_06\", \"lotes\": 3}, {\"name\": \"WIN_16\", \"lotes\": 6}, {\"name\": \"WIN_22\", \"lotes\": 6}, {\"name\": \"WIN_19\", \"lotes\": 7}, {\"name\": \"WIN_33\", \"lotes\": 6}, {\"name\": \"WIN_27\", \"lotes\": 3}, {\"name\": \"WIN_38\", \"lotes\": 6}, {\"name\": \"WIN_07\", \"lotes\": 5}, {\"name\": \"WIN_12\", \"lotes\": 5}, {\"name\": \"WIN_19_v2026\", \"lotes\": 4}, {\"name\": \"WIN_25_v2026\", \"lotes\": 5}, {\"name\": \"WIN_83\", \"lotes\": 2}, {\"name\": \"WIN_02\", \"lotes\": 3}, {\"name\": \"WIN_41\", \"lotes\": 4}, {\"name\": \"WIN_17\", \"lotes\": 3}, {\"name\": \"WDO_05\", \"lotes\": 6}, {\"name\": \"WIN_84\", \"lotes\": 2}]",
+    "config_versions": "[{\"valid_from\": null, \"robots_json\": \"[{\\\"name\\\": \\\"BIT_54\\\", \\\"lotes\\\": 24}, {\\\"name\\\": \\\"WIN_71\\\", \\\"lotes\\\": 8}, {\\\"name\\\": \\\"WDO_34\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_36\\\", \\\"lotes\\\": 13}, {\\\"name\\\": \\\"WIN_37\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WIN_06\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_16\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WIN_22\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WIN_19\\\", \\\"lotes\\\": 7}, {\\\"name\\\": \\\"WIN_33\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WIN_27\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_38\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WIN_07\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_12\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_19_v2026\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_25_v2026\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_83\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_02\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_41\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_17\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WDO_05\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WIN_84\\\", \\\"lotes\\\": 2}]\"}]",
+    "capital_inicial": 0,
+    "cor": "#f5a623",
+    "logo": "6015"
+  },
+  {
+    "id": 22,
+    "name": "PROFIT 35K",
+    "robots_json": "[{\"name\": \"BIT_54\", \"lotes\": 30}, {\"name\": \"WIN_71\", \"lotes\": 10}, {\"name\": \"WDO_34\", \"lotes\": 4}, {\"name\": \"WIN_36\", \"lotes\": 16}, {\"name\": \"WIN_12\", \"lotes\": 7}, {\"name\": \"WIN_02\", \"lotes\": 4}, {\"name\": \"WIN_84\", \"lotes\": 3}, {\"name\": \"WIN_37\", \"lotes\": 8}, {\"name\": \"WIN_06\", \"lotes\": 5}, {\"name\": \"WIN_16\", \"lotes\": 7}, {\"name\": \"WIN_22\", \"lotes\": 6}, {\"name\": \"WIN_19\", \"lotes\": 9}, {\"name\": \"WIN_03\", \"lotes\": 2}, {\"name\": \"WIN_83\", \"lotes\": 2}, {\"name\": \"WIN_17\", \"lotes\": 2}, {\"name\": \"WIN_33\", \"lotes\": 6}, {\"name\": \"WIN_27\", \"lotes\": 4}, {\"name\": \"WIN_38\", \"lotes\": 7}, {\"name\": \"WIN_07\", \"lotes\": 6}, {\"name\": \"WDO_05\", \"lotes\": 7}, {\"name\": \"WIN_13_2026\", \"lotes\": 1}, {\"name\": \"WIN_19_v2026\", \"lotes\": 3}, {\"name\": \"WIN_25_v2026\", \"lotes\": 2}]",
+    "config_versions": "[{\"valid_from\": null, \"robots_json\": \"[{\\\"name\\\": \\\"BIT_54\\\", \\\"lotes\\\": 30}, {\\\"name\\\": \\\"WIN_71\\\", \\\"lotes\\\": 10}, {\\\"name\\\": \\\"WDO_34\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_36\\\", \\\"lotes\\\": 16}, {\\\"name\\\": \\\"WIN_12\\\", \\\"lotes\\\": 7}, {\\\"name\\\": \\\"WIN_02\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_84\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_37\\\", \\\"lotes\\\": 8}, {\\\"name\\\": \\\"WIN_06\\\", \\\"lotes\\\": 5}, {\\\"name\\\": \\\"WIN_16\\\", \\\"lotes\\\": 7}, {\\\"name\\\": \\\"WIN_22\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WIN_19\\\", \\\"lotes\\\": 9}, {\\\"name\\\": \\\"WIN_03\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_83\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_17\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_33\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WIN_27\\\", \\\"lotes\\\": 4}, {\\\"name\\\": \\\"WIN_38\\\", \\\"lotes\\\": 7}, {\\\"name\\\": \\\"WIN_07\\\", \\\"lotes\\\": 6}, {\\\"name\\\": \\\"WDO_05\\\", \\\"lotes\\\": 7}, {\\\"name\\\": \\\"WIN_13_2026\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_19_v2026\\\", \\\"lotes\\\": 3}, {\\\"name\\\": \\\"WIN_25_v2026\\\", \\\"lotes\\\": 2}]\"}]",
+    "capital_inicial": 0,
+    "cor": "#4f8ef7",
+    "logo": "6015"
+  },
+  {
+    "id": 7,
+    "name": "PROFIT 3K",
+    "robots_json": "[{\"name\": \"WIN_22\", \"lotes\": 1}, {\"name\": \"WIN_36\", \"lotes\": 1}, {\"name\": \"WIN_06\", \"lotes\": 1}, {\"name\": \"BIT_54\", \"lotes\": 2}, {\"name\": \"WIN_19\", \"lotes\": 1}, {\"name\": \"WIN_16\", \"lotes\": 1}]",
+    "config_versions": "[{\"valid_from\": null, \"robots_json\": \"[{\\\"name\\\": \\\"WIN_22\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_36\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_06\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"BIT_54\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_19\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_16\\\", \\\"lotes\\\": 1}]\"}]",
+    "capital_inicial": 0,
+    "cor": "#34d47e",
+    "logo": "6015"
+  },
+  {
+    "id": 8,
+    "name": "PROFIT 5K",
+    "robots_json": "[{\"name\": \"WIN_22\", \"lotes\": 1}, {\"name\": \"WIN_36\", \"lotes\": 1}, {\"name\": \"WIN_06\", \"lotes\": 1}, {\"name\": \"BIT_54\", \"lotes\": 2}, {\"name\": \"WIN_19\", \"lotes\": 1}, {\"name\": \"WIN_16\", \"lotes\": 1}, {\"name\": \"WIN_27\", \"lotes\": 1}, {\"name\": \"WIN_33\", \"lotes\": 1}, {\"name\": \"WIN_07\", \"lotes\": 1}, {\"name\": \"WIN_12\", \"lotes\": 1}]",
+    "config_versions": "[{\"valid_from\": null, \"robots_json\": \"[{\\\"name\\\": \\\"WIN_22\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_36\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_06\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"BIT_54\\\", \\\"lotes\\\": 2}, {\\\"name\\\": \\\"WIN_19\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_16\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_27\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_33\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_07\\\", \\\"lotes\\\": 1}, {\\\"name\\\": \\\"WIN_12\\\", \\\"lotes\\\": 1}]\"}]",
+    "capital_inicial": 0,
+    "cor": "#f06060",
+    "logo": "6015"
+  }
+]

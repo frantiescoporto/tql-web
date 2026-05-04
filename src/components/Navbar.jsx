@@ -28,6 +28,10 @@ export default function Navbar({ theme, toggleTheme }) {
         <NavLink to="/sobre" className={({ isActive }) => 'navbar-link' + (isActive ? ' active' : '')}>
           Sobre o Método
         </NavLink>
+        <NavLink to="/portfolios-recomendados" className={({ isActive }) => 'navbar-link' + (isActive ? ' active' : '')}
+          style={{ color: 'var(--warning)', fontWeight: 600 }}>
+          🎯 Portfólios
+        </NavLink>
       </div>
 
       <div className="navbar-actions">
