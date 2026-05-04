@@ -9666,6 +9666,105 @@
     "res_op_pct": 0
   },
   {
+    "abertura": "04/05/2026 09:48:13",
+    "fechamento": "04/05/2026 09:54:00",
+    "ativo": "WIN_36",
+    "lado": "V",
+    "qtd": 1,
+    "res_op": 13,
+    "res_op_pct": 65
+  },
+  {
+    "abertura": "04/05/2026 09:48:13",
+    "fechamento": "04/05/2026 09:54:00",
+    "ativo": "WIN_25",
+    "lado": "V",
+    "qtd": 1,
+    "res_op": 13,
+    "res_op_pct": 65
+  },
+  {
+    "abertura": "04/05/2026 09:48:15",
+    "fechamento": "04/05/2026 09:55:00",
+    "ativo": "WIN_03",
+    "lado": "V",
+    "qtd": 1,
+    "res_op": 19,
+    "res_op_pct": 95
+  },
+  {
+    "abertura": "04/05/2026 10:00:04",
+    "fechamento": "04/05/2026 10:12:00",
+    "ativo": "WIN_36",
+    "lado": "C",
+    "qtd": 1,
+    "res_op": 19,
+    "res_op_pct": 95
+  },
+  {
+    "abertura": "04/05/2026 10:00:04",
+    "fechamento": "04/05/2026 10:12:00",
+    "ativo": "WIN_25",
+    "lado": "C",
+    "qtd": 1,
+    "res_op": 19,
+    "res_op_pct": 95
+  },
+  {
+    "abertura": "04/05/2026 12:15:16",
+    "fechamento": "04/05/2026 13:08:03",
+    "ativo": "WIN_12",
+    "lado": "V",
+    "qtd": 1,
+    "res_op": 243,
+    "res_op_pct": 1215
+  },
+  {
+    "abertura": "04/05/2026 12:46:50",
+    "fechamento": "04/05/2026 16:42:00",
+    "ativo": "WIN_18",
+    "lado": "V",
+    "qtd": 1,
+    "res_op": 88,
+    "res_op_pct": 440
+  },
+  {
+    "abertura": "04/05/2026 12:47:08",
+    "fechamento": "04/05/2026 17:00:00",
+    "ativo": "WIN_06",
+    "lado": "V",
+    "qtd": 1,
+    "res_op": 111,
+    "res_op_pct": 555
+  },
+  {
+    "abertura": "04/05/2026 13:08:03",
+    "fechamento": "04/05/2026 13:19:47",
+    "ativo": "WIN_41",
+    "lado": "V",
+    "qtd": 1,
+    "res_op": -75,
+    "res_op_pct": -375
+  },
+  {
+    "abertura": "04/05/2026 13:19:01",
+    "fechamento": "04/05/2026 14:53:54",
+    "ativo": "BIT_54",
+    "lado": "C",
+    "qtd": 1,
+    "res_op": 31,
+    "res_op_pct": 3100
+  },
+  {
+    "abertura": "04/05/2026 13:19:47",
+    "fechamento": "04/05/2026 16:42:00",
+    "ativo": "WIN_12",
+    "lado": "V",
+    "qtd": 1,
+    "res_op": 117,
+    "res_op_pct": 585
+  },
+  {
     "abertura": "04/06/2024 00:00:00",
     "fechamento": "04/06/2024 00:00:00",
     "ativo": "WIN_37",
