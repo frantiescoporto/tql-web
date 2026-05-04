@@ -9648,6 +9648,24 @@
     "res_op_pct": 0
   },
   {
+    "abertura": "04/05/2026 00:00:00",
+    "fechamento": "04/05/2026 00:00:00",
+    "ativo": "WIN_07",
+    "lado": "",
+    "qtd": 1,
+    "res_op": 37,
+    "res_op_pct": 0
+  },
+  {
+    "abertura": "04/05/2026 00:00:00",
+    "fechamento": "04/05/2026 00:00:00",
+    "ativo": "WIN_02",
+    "lado": "",
+    "qtd": 1,
+    "res_op": 9,
+    "res_op_pct": 0
+  },
+  {
     "abertura": "04/06/2024 00:00:00",
     "fechamento": "04/06/2024 00:00:00",
     "ativo": "WIN_37",
