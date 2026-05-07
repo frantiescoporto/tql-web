@@ -21024,6 +21024,15 @@
     "res_op_pct": 0
   },
   {
+    "abertura": "07/05/2026 15:22:10",
+    "fechamento": "07/05/2026 15:42:00",
+    "ativo": "WIN_25",
+    "lado": "V",
+    "qtd": 1,
+    "res_op": 4,
+    "res_op_pct": 20
+  },
+  {
     "abertura": "07/06/2023 00:00:00",
     "fechamento": "07/06/2023 00:00:00",
     "ativo": "WIN_19",
