@@ -9,6 +9,24 @@
     "config_versions": "[{\"valid_from\":null,\"robots_json\":\"[{\\\"name\\\":\\\"FENRIR\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"SOLDATER\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WULFGAR\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"PIONEIRO\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"VALKYRIE\\\",\\\"lotes\\\":1}]\"}]"
   },
   {
+    "id": 22,
+    "name": "AVEL | 10K",
+    "robots_json": "[{\"name\":\"MT_249\",\"lotes\":2},{\"name\":\"MT_217\",\"lotes\":2},{\"name\":\"MT_219\",\"lotes\":1},{\"name\":\"MT_240\",\"lotes\":2},{\"name\":\"MT_250\",\"lotes\":1},{\"name\":\"MT_251\",\"lotes\":2},{\"name\":\"MT_252\",\"lotes\":1},{\"name\":\"MT_033\",\"lotes\":4},{\"name\":\"MT_036\",\"lotes\":5}]",
+    "capital_inicial": 10000,
+    "cor": "#f06060",
+    "logo": "avel",
+    "config_versions": "[{\"valid_from\":null,\"robots_json\":\"[{\\\"name\\\":\\\"MT_249\\\",\\\"lotes\\\":2},{\\\"name\\\":\\\"MT_217\\\",\\\"lotes\\\":2},{\\\"name\\\":\\\"MT_219\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"MT_240\\\",\\\"lotes\\\":2},{\\\"name\\\":\\\"MT_250\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"MT_251\\\",\\\"lotes\\\":2},{\\\"name\\\":\\\"MT_252\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"MT_033\\\",\\\"lotes\\\":4},{\\\"name\\\":\\\"MT_036\\\",\\\"lotes\\\":5}]\"}]"
+  },
+  {
+    "id": 23,
+    "name": "AVEL | 15K",
+    "robots_json": "[{\"name\":\"MT_249\",\"lotes\":2},{\"name\":\"MT_036\",\"lotes\":5},{\"name\":\"MT_219\",\"lotes\":2},{\"name\":\"MT_240\",\"lotes\":2},{\"name\":\"MT_250\",\"lotes\":2},{\"name\":\"MT_251\",\"lotes\":2},{\"name\":\"MT_252\",\"lotes\":1},{\"name\":\"MT_217\",\"lotes\":2},{\"name\":\"MT_221\",\"lotes\":1},{\"name\":\"MT_033\",\"lotes\":3},{\"name\":\"MT_225\",\"lotes\":1},{\"name\":\"MT_223\",\"lotes\":2}]",
+    "capital_inicial": 15000,
+    "cor": "#a855f7",
+    "logo": "avel",
+    "config_versions": "[{\"valid_from\":null,\"robots_json\":\"[{\\\"name\\\":\\\"MT_249\\\",\\\"lotes\\\":2},{\\\"name\\\":\\\"MT_036\\\",\\\"lotes\\\":5},{\\\"name\\\":\\\"MT_219\\\",\\\"lotes\\\":2},{\\\"name\\\":\\\"MT_240\\\",\\\"lotes\\\":2},{\\\"name\\\":\\\"MT_250\\\",\\\"lotes\\\":2},{\\\"name\\\":\\\"MT_251\\\",\\\"lotes\\\":2},{\\\"name\\\":\\\"MT_252\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"MT_217\\\",\\\"lotes\\\":2},{\\\"name\\\":\\\"MT_221\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"MT_033\\\",\\\"lotes\\\":3},{\\\"name\\\":\\\"MT_225\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"MT_223\\\",\\\"lotes\\\":2}]\"}]"
+  },
+  {
     "id": 11,
     "name": "AVEL | 2K",
     "robots_json": "[{\"name\":\"MT_251\",\"lotes\":1},{\"name\":\"MT_259\",\"lotes\":1},{\"name\":\"MT_033\",\"lotes\":1}]",
@@ -27,22 +45,22 @@
     "config_versions": "[{\"valid_from\":null,\"robots_json\":\"[{\\\"name\\\":\\\"MT_221\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"MT_036\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"MT_217\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"MT_249\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"MT_240\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"MT_261\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"MT_251\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"MT_223\\\",\\\"lotes\\\":1}]\"}]"
   },
   {
-    "id": 19,
-    "name": "COMBO 2 - NELO",
-    "robots_json": "[{\"name\":\"WIN_22\",\"lotes\":1},{\"name\":\"WIN_33\",\"lotes\":1},{\"name\":\"WIN_12\",\"lotes\":1},{\"name\":\"WIN_25\",\"lotes\":1}]",
-    "capital_inicial": 4000,
-    "cor": "#f5a623",
-    "logo": "frantiesco",
-    "config_versions": "[{\"valid_from\":null,\"robots_json\":\"[{\\\"name\\\":\\\"WIN_22\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WIN_33\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WIN_12\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WIN_25\\\",\\\"lotes\\\":1}]\"}]"
-  },
-  {
     "id": 18,
     "name": "COMBO NELO - 01",
     "robots_json": "[{\"name\":\"WIN_22\",\"lotes\":1},{\"name\":\"WIN_33\",\"lotes\":1},{\"name\":\"WIN_12\",\"lotes\":1}]",
     "capital_inicial": 3000,
     "cor": "#ffd700",
-    "logo": "frantiesco",
+    "logo": "nelogica",
     "config_versions": "[{\"valid_from\":null,\"robots_json\":\"[{\\\"name\\\":\\\"WIN_22\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WIN_33\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WIN_12\\\",\\\"lotes\\\":1}]\"}]"
+  },
+  {
+    "id": 19,
+    "name": "COMBO NELO - 02",
+    "robots_json": "[{\"name\":\"WIN_22\",\"lotes\":1},{\"name\":\"WIN_33\",\"lotes\":1},{\"name\":\"WIN_12\",\"lotes\":1},{\"name\":\"WIN_25\",\"lotes\":1}]",
+    "capital_inicial": 4000,
+    "cor": "#f5a623",
+    "logo": "nelogica",
+    "config_versions": "[{\"valid_from\":null,\"robots_json\":\"[{\\\"name\\\":\\\"WIN_22\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WIN_33\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WIN_12\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WIN_25\\\",\\\"lotes\\\":1}]\"}]"
   },
   {
     "id": 20,
@@ -50,7 +68,7 @@
     "robots_json": "[{\"name\":\"WIN_22\",\"lotes\":1},{\"name\":\"WIN_33\",\"lotes\":1},{\"name\":\"WIN_25\",\"lotes\":1},{\"name\":\"WIN_12\",\"lotes\":1},{\"name\":\"WIN_16\",\"lotes\":1}]",
     "capital_inicial": 5000,
     "cor": "#4f8ef7",
-    "logo": "frantiesco",
+    "logo": "nelogica",
     "config_versions": "[{\"valid_from\":null,\"robots_json\":\"[{\\\"name\\\":\\\"WIN_22\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WIN_33\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WIN_25\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WIN_12\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WIN_16\\\",\\\"lotes\\\":1}]\"}]"
   },
   {
@@ -97,6 +115,15 @@
     "cor": "#4f8ef7",
     "logo": "6015",
     "config_versions": "[{\"valid_from\":null,\"robots_json\":\"[{\\\"name\\\":\\\"BIT_51\\\",\\\"lotes\\\":6},{\\\"name\\\":\\\"BIT_52\\\",\\\"lotes\\\":12},{\\\"name\\\":\\\"BIT_53\\\",\\\"lotes\\\":5},{\\\"name\\\":\\\"BIT_54\\\",\\\"lotes\\\":12},{\\\"name\\\":\\\"WDO_05\\\",\\\"lotes\\\":3},{\\\"name\\\":\\\"WDO_34\\\",\\\"lotes\\\":3},{\\\"name\\\":\\\"WIN_02\\\",\\\"lotes\\\":3},{\\\"name\\\":\\\"WIN_06\\\",\\\"lotes\\\":4},{\\\"name\\\":\\\"WIN_07\\\",\\\"lotes\\\":4},{\\\"name\\\":\\\"WIN_12\\\",\\\"lotes\\\":5},{\\\"name\\\":\\\"WIN_16\\\",\\\"lotes\\\":3},{\\\"name\\\":\\\"WIN_17\\\",\\\"lotes\\\":2},{\\\"name\\\":\\\"WIN_18\\\",\\\"lotes\\\":2},{\\\"name\\\":\\\"WIN_19\\\",\\\"lotes\\\":6},{\\\"name\\\":\\\"WIN_22\\\",\\\"lotes\\\":5},{\\\"name\\\":\\\"WIN_27\\\",\\\"lotes\\\":3},{\\\"name\\\":\\\"WIN_29\\\",\\\"lotes\\\":3},{\\\"name\\\":\\\"WIN_33\\\",\\\"lotes\\\":6},{\\\"name\\\":\\\"WIN_36\\\",\\\"lotes\\\":7},{\\\"name\\\":\\\"WIN_37\\\",\\\"lotes\\\":4},{\\\"name\\\":\\\"WIN_38\\\",\\\"lotes\\\":5},{\\\"name\\\":\\\"WIN_41\\\",\\\"lotes\\\":3},{\\\"name\\\":\\\"WIN_43\\\",\\\"lotes\\\":5},{\\\"name\\\":\\\"WIN_46\\\",\\\"lotes\\\":1},{\\\"name\\\":\\\"WIN_71\\\",\\\"lotes\\\":5},{\\\"name\\\":\\\"WIN_72\\\",\\\"lotes\\\":2},{\\\"name\\\":\\\"WSP_06\\\",\\\"lotes\\\":1}]\"}]"
+  },
+  {
+    "id": 21,
+    "name": "MENTORIA - 35K",
+    "robots_json": "[{\"name\":\"WIN_27\",\"lotes\":4},{\"name\":\"WIN_18\",\"lotes\":3},{\"name\":\"WIN_07\",\"lotes\":5},{\"name\":\"WIN_12\",\"lotes\":7},{\"name\":\"BIT_54\",\"lotes\":37},{\"name\":\"WIN_71\",\"lotes\":11},{\"name\":\"WIN_16\",\"lotes\":9},{\"name\":\"WIN_06\",\"lotes\":5},{\"name\":\"WIN_36\",\"lotes\":19},{\"name\":\"WDO_34\",\"lotes\":4},{\"name\":\"WIN_19\",\"lotes\":11},{\"name\":\"WIN_22\",\"lotes\":9},{\"name\":\"WIN_33\",\"lotes\":10},{\"name\":\"WIN_37\",\"lotes\":8},{\"name\":\"WIN_38\",\"lotes\":9},{\"name\":\"WIN_02\",\"lotes\":3}]",
+    "capital_inicial": 35000,
+    "cor": "#34d47e",
+    "logo": "6015",
+    "config_versions": "[{\"valid_from\":null,\"robots_json\":\"[{\\\"name\\\":\\\"WIN_27\\\",\\\"lotes\\\":4},{\\\"name\\\":\\\"WIN_18\\\",\\\"lotes\\\":3},{\\\"name\\\":\\\"WIN_07\\\",\\\"lotes\\\":5},{\\\"name\\\":\\\"WIN_12\\\",\\\"lotes\\\":7},{\\\"name\\\":\\\"BIT_54\\\",\\\"lotes\\\":37},{\\\"name\\\":\\\"WIN_71\\\",\\\"lotes\\\":11},{\\\"name\\\":\\\"WIN_16\\\",\\\"lotes\\\":9},{\\\"name\\\":\\\"WIN_06\\\",\\\"lotes\\\":5},{\\\"name\\\":\\\"WIN_36\\\",\\\"lotes\\\":19},{\\\"name\\\":\\\"WDO_34\\\",\\\"lotes\\\":4},{\\\"name\\\":\\\"WIN_19\\\",\\\"lotes\\\":11},{\\\"name\\\":\\\"WIN_22\\\",\\\"lotes\\\":9},{\\\"name\\\":\\\"WIN_33\\\",\\\"lotes\\\":10},{\\\"name\\\":\\\"WIN_37\\\",\\\"lotes\\\":8},{\\\"name\\\":\\\"WIN_38\\\",\\\"lotes\\\":9},{\\\"name\\\":\\\"WIN_02\\\",\\\"lotes\\\":3}]\"}]"
   },
   {
     "id": 16,
