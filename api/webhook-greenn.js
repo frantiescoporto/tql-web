@@ -45,7 +45,7 @@ async function sendEmail({ to, subject, html }) {
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: { 'Authorization': `Bearer ${RESEND_KEY}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ from: 'Trade Quant Lab <noreply@tradequantlab.com.br>', to, subject, html })
+    body: JSON.stringify({ from: 'Trade Quant Lab <onboarding@resend.dev>', to, subject, html })
   })
   return res.json()
 }
