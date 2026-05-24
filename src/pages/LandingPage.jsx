@@ -96,7 +96,7 @@ export default function LandingPage() {
     },
     {
       tag: 'PRO', name: 'Pro', popular: true,
-      price: billing === 'mensal' ? 99 : 74,
+      price: billing === 'mensal' ? 29.90 : 20.93,
       desc: 'Para análise completa de estratégias',
       color: '#4f8ef7', btnLabel: 'Assinar Pro', btnStyle: 'blue',
       msg: 'Olá! Quero assinar o plano Pro do Trade Quant Lab.',
@@ -105,7 +105,7 @@ export default function LandingPage() {
     },
     {
       tag: 'DEV', name: 'Dev', badge: 'COMPLETO',
-      price: billing === 'mensal' ? 189 : 142,
+      price: billing === 'mensal' ? 99.90 : 69.93,
       desc: 'Para gestão de portfólios',
       color: '#f5a623', btnLabel: 'Assinar Dev', btnStyle: 'gold',
       msg: 'Olá! Quero assinar o plano Dev do Trade Quant Lab.',
@@ -418,7 +418,7 @@ export default function LandingPage() {
               <span style={{ fontSize: 14, fontWeight: billing === 'anual' ? 700 : 400,
                 color: billing === 'anual' ? s.text : s.muted, cursor: 'pointer' }}
                 onClick={() => setBilling('anual')}>
-                Anual <span style={{ color: s.accent, fontSize: 12, fontWeight: 700 }}>−25%</span>
+                Anual <span style={{ color: s.accent, fontSize: 12, fontWeight: 700 }}>−30%</span>
               </span>
             </div>
           </div>
@@ -448,7 +448,7 @@ export default function LandingPage() {
                     <span style={{ fontSize: 14, color: s.muted }}>/mês</span>
                     {billing === 'anual' && (
                       <div style={{ fontSize: 12, color: s.accent, marginTop: 2 }}>
-                        cobrado anualmente · R$ {plan.price * 12}/ano
+                        cobrado anualmente · R$ {(plan.price * 12).toFixed(2).replace('.', ',')}/ano
                       </div>
                     )}
                   </div>
@@ -457,18 +457,17 @@ export default function LandingPage() {
                 )}
                 <div style={{ fontSize: 13, color: s.muted, marginBottom: 28 }}>{plan.desc}</div>
 
-                <a href={`${WA}?text=${encodeURIComponent(plan.msg)}`}
-                  target="_blank" rel="noopener noreferrer"
-                  style={{ display: 'block', textAlign: 'center', textDecoration: 'none',
+                <button onClick={() => navigate('/planos')}
+                  style={{ display: 'block', width: '100%', textAlign: 'center', textDecoration: 'none',
                     padding: '13px', borderRadius: 8, fontSize: 15, fontWeight: 700,
-                    marginBottom: 28, transition: 'opacity .15s',
+                    marginBottom: 28, transition: 'opacity .15s', cursor: 'pointer',
                     background: plan.btnStyle === 'blue' ? plan.color : plan.btnStyle === 'gold' ? plan.color : 'transparent',
                     color: plan.btnStyle === 'outline' ? s.text : (plan.btnStyle === 'gold' ? '#000' : '#fff'),
                     border: plan.btnStyle === 'outline' ? `1px solid ${s.border}` : 'none' }}
                   onMouseEnter={e => e.currentTarget.style.opacity = '.85'}
                   onMouseLeave={e => e.currentTarget.style.opacity = '1'}>
                   {plan.btnLabel}
-                </a>
+                </button>
 
                 {plan.features.map((f, j) => (
                   <div key={j} style={{ display: 'flex', gap: 10, alignItems: 'center',
@@ -562,7 +561,7 @@ export default function LandingPage() {
             Comece agora — ou fale com o Frantiesco diretamente no WhatsApp.
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button onClick={() => document.getElementById('planos').scrollIntoView({ behavior: 'smooth' })}
+            <button onClick={() => navigate('/planos')}
               style={{ background: s.accent, color: '#000', border: 'none',
                 padding: '16px 32px', borderRadius: 8, fontSize: 16, fontWeight: 700, cursor: 'pointer' }}>
               Ver planos →
