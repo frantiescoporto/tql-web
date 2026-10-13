@@ -2,29 +2,23 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/biblioteca.css'
 
-// ── Planos de aquisição ───────────────────────────────────────────────────────
-// Preencha price (ex.: 'R$ 497') e checkout (link Greenn) quando estiverem definidos.
-// Sem checkout, o botão abre o WhatsApp já com o plano escolhido.
+// ── Oferta ────────────────────────────────────────────────────────────────────
+// Um único plano com todas as estratégias. Quando tiver os links da Greenn, preencha checkout.
+// Sem checkout, o botão abre o WhatsApp já com a opção escolhida.
 const WHATSAPP = '5553999010262'
-const PLANOS = [
-  {
-    key: 'p5', qtd: 5, title: 'Seleção 5',
-    text: 'Para começar a automatizar com um grupo enxuto e diversificado.',
-    perks: ['5 estratégias à sua escolha', 'Arquivo .AUT pronto para importar', 'Configurações já ajustadas'],
-    price: null, checkout: null,
-  },
-  {
-    key: 'p20', qtd: 20, title: 'Coleção 20', featured: true,
-    text: 'Para montar um portfólio com vários ativos, tempos gráficos e estilos.',
-    perks: ['20 estratégias à sua escolha', 'Arquivo .AUT pronto para importar', 'Configurações já ajustadas', 'Mistura de day trade e swing'],
-    price: null, checkout: null,
-  },
-  {
-    key: 'all', qtd: null, title: 'Biblioteca completa',
-    text: 'Todas as estratégias publicadas na biblioteca, em um único arquivo.',
-    perks: ['Todas as estratégias TQL', 'Arquivo .AUT pronto para importar', 'Configurações já ajustadas'],
-    price: null, checkout: null,
-  },
+const OFERTA = {
+  title: 'Biblioteca completa',
+  periodo: 'Assinatura trimestral',
+  meses: 3,
+  garantiaDias: 30,
+  opcoes: [
+    { key: 'padrao', label: 'Trimestral', price: 997, checkout: null },
+    { key: 'avel', label: 'Clientes Avel', price: 697.90, checkout: null, note: '30% de desconto para quem é cliente Avel' },
+  ],
+}
+const PERKS = [
+  'Todas as estratégias TQL publicadas na biblioteca',
+  'Arquivo .AUT com todas as configurações prontas',
 ]
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -89,9 +83,11 @@ function InfoTip({ item }) {
   )
 }
 
-function planHref(plan) {
-  if (plan.checkout) return plan.checkout
-  const msg = `Olá! Quero adquirir o plano ${plan.title} da Biblioteca TQL.`
+function planHref(op) {
+  if (op.checkout) return op.checkout
+  const msg = op.key === 'avel'
+    ? 'Olá! Sou cliente Avel e quero assinar a Biblioteca TQL (trimestral com 30% de desconto).'
+    : 'Olá! Quero assinar a Biblioteca TQL (plano trimestral).'
   return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`
 }
 
@@ -143,10 +139,10 @@ export default function BibliotecaPage() {
           <h1>Biblioteca de algoritmos TQL</h1>
           <p>
             Estratégias para o Profit criadas no TQL Studio e validadas pelo Método 6015.
-            Você escolhe o pacote e recebe um arquivo .AUT com tudo configurado, pronto para ligar.
+            Você assina e recebe um arquivo .AUT com todas as estratégias configuradas, pronto para ligar.
           </p>
           <div className="bib-hero-actions">
-            <a className="bib-btn solid" href="#planos">Ver pacotes</a>
+            <a className="bib-btn solid" href="#planos">Ver plano</a>
             <a className="bib-btn ghost" href="#estrategias">Explorar estratégias</a>
           </div>
         </div>
@@ -261,30 +257,44 @@ export default function BibliotecaPage() {
       <section className="bib-sec" id="planos">
         <div className="bib-sec-head">
           <div>
-            <h2>Escolha o tamanho do seu pacote</h2>
-            <p>As estratégias são vendidas em grupos. Quanto maior o pacote, mais diversificado fica o seu portfólio.</p>
+            <h2>Acesso a todas as estratégias</h2>
+            <p>Um plano só, com a biblioteca inteira. Teste por {OFERTA.garantiaDias} dias: se não fizer sentido para você, devolvemos o valor.</p>
           </div>
         </div>
-        <div className="bib-plans">
-          {PLANOS.map(p => (
-            <div key={p.key} className={'bib-plan' + (p.featured ? ' featured' : '')}>
-              {p.featured && <span className="bib-tag">Mais escolhido</span>}
-              <div className="bib-plan-n">
-                {p.qtd ?? items.length}
-                <small>estratégias</small>
-              </div>
-              <h3>{p.title}</h3>
-              <p>{p.text}</p>
-              <ul>{p.perks.map(k => <li key={k}>{k}</li>)}</ul>
-              <div className="bib-plan-price">
-                {p.price || 'Valor sob consulta'}
-                <span>{p.price ? 'pagamento único' : 'Fale com a gente pelo WhatsApp'}</span>
-              </div>
-              <a className={'bib-btn ' + (p.featured ? 'solid' : 'ghost')} href={planHref(p)} target="_blank" rel="noreferrer" aria-label={`Quero o pacote ${p.title}`}>
-                Quero este pacote
-              </a>
+        <div className="bib-offer">
+          <div className="bib-offer-info">
+            <div className="bib-plan-n">{items.length}<small>estratégias</small></div>
+            <h3>{OFERTA.title}</h3>
+            <ul>
+              {PERKS.map(k => <li key={k}>{k}</li>)}
+              {ativos.length > 0 && <li>Day trade e swing trade em {ativos.join(', ')}</li>}
+            </ul>
+            <div className="bib-guarantee">
+              <b>{OFERTA.garantiaDias} dias de garantia</b>
+              <span>Use a biblioteca por até {OFERTA.garantiaDias} dias. Se se arrepender, é só pedir e devolvemos 100% do valor.</span>
             </div>
-          ))}
+          </div>
+          <div className="bib-offer-prices">
+            {OFERTA.opcoes.map(op => (
+              <div key={op.key} className={'bib-price' + (op.key === 'avel' ? ' avel' : '')}>
+                <div className="bib-price-head">
+                  <span>{op.label}</span>
+                  {op.key === 'avel' && <span className="bib-tag-inline">-30%</span>}
+                </div>
+                <div className="bib-price-val">
+                  {op.key === 'avel' && <s>{brlc(OFERTA.opcoes[0].price)}</s>}
+                  {brlc(op.price)}
+                </div>
+                <div className="bib-price-sub">
+                  {OFERTA.periodo}, equivale a {brlc(op.price / OFERTA.meses)} por mês
+                  {op.note ? <><br />{op.note}</> : null}
+                </div>
+                <a className={'bib-btn ' + (op.key === 'avel' ? 'solid' : 'ghost')} href={planHref(op)} target="_blank" rel="noreferrer">
+                  {op.key === 'avel' ? 'Assinar como cliente Avel' : 'Assinar o plano trimestral'}
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -292,8 +302,8 @@ export default function BibliotecaPage() {
         <div className="bib-sec-head"><div><h2>Como você recebe</h2></div></div>
         <div className="bib-steps">
           <div className="bib-step">
-            <h3>Escolha o pacote</h3>
-            <p>Selecione 5, 20 ou a biblioteca completa e quais estratégias quer no seu grupo.</p>
+            <h3>Assine o plano</h3>
+            <p>Plano trimestral com todas as estratégias. Clientes Avel pagam 30% a menos.</p>
           </div>
           <div className="bib-step">
             <h3>Receba o arquivo</h3>

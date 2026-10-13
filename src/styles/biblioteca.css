@@ -233,3 +233,33 @@ html.theme-light .bib {
   .bib-curve-cap { text-align: left; }
   .bib-pop { width: min(300px, calc(100vw - 48px)); transform: translateX(-20%); }
 }
+
+/* ── Oferta única ─────────────────────────────────────── */
+.bib-offer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); border: 1px solid var(--b-line); border-radius: 18px; overflow: hidden; }
+.bib-offer-info { padding: 32px 30px; display: flex; flex-direction: column; gap: 16px; }
+.bib-offer-info h3 { font-size: 18px; font-weight: 600; }
+.bib-offer-info ul { list-style: none; display: grid; gap: 9px; font-size: 14px; }
+.bib-offer-info li { padding-left: 22px; position: relative; }
+.bib-offer-info li::before { content: ''; position: absolute; left: 2px; top: .45em; width: 10px; height: 5px; border-left: 2px solid var(--b-teal); border-bottom: 2px solid var(--b-teal); transform: rotate(-45deg); }
+.bib-guarantee { margin-top: auto; padding: 14px 16px; border-radius: 12px; border: 1px dashed var(--b-teal); display: grid; gap: 4px; }
+.bib-guarantee b { font-size: 15px; font-weight: 600; color: var(--b-teal); }
+.bib-guarantee span { font-size: 13px; line-height: 1.5; color: var(--b-mute); }
+.bib-offer-prices { display: grid; grid-template-columns: 1fr 1fr; border-left: 1px solid var(--b-line); }
+.bib-price { padding: 32px 26px; display: flex; flex-direction: column; gap: 12px; }
+.bib-price + .bib-price { border-left: 1px solid var(--b-line); }
+.bib-price.avel { background: var(--b-teal-soft); }
+.bib-price-head { display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; }
+.bib-tag-inline { font-size: 12px; font-weight: 700; color: #04140f; background: var(--b-teal); border-radius: 999px; padding: 3px 9px; }
+.bib-price-val { font-size: 38px; font-weight: 650; letter-spacing: -0.035em; line-height: 1.05; white-space: nowrap; }
+.bib-price-val s { display: block; font-size: 15px; font-weight: 500; letter-spacing: 0; color: var(--b-mute); margin-bottom: 4px; }
+.bib-price-sub { font-size: 13px; line-height: 1.5; color: var(--b-mute); }
+.bib-price .bib-btn { margin-top: auto; width: 100%; }
+@media (max-width: 1020px) {
+  .bib-offer { grid-template-columns: 1fr; }
+  .bib-offer-prices { border-left: 0; border-top: 1px solid var(--b-line); }
+}
+@media (max-width: 560px) {
+  .bib-offer-prices { grid-template-columns: 1fr; }
+  .bib-price + .bib-price { border-left: 0; border-top: 1px solid var(--b-line); }
+  .bib-price-val { font-size: 34px; }
+}
