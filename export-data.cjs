@@ -132,5 +132,9 @@ for (const f of files) {
   log(`✅ ${f.name.padEnd(35)} → ${filePath} (${kb} KB)`)
 }
 
+// Biblioteca TQL (cruza com o TQL Studio: criação, day/swing, descrição)
+try { require('./export-biblioteca.cjs').run({ robots, outDir: OUT_DIR }) }
+catch (e) { log(`Aviso: biblioteca.json não gerado: ${e.message}`) }
+
 log(`\nConcluído em: ${new Date().toLocaleString('pt-BR')}`)
 console.log('\n📋 Próximo passo: GitHub Desktop → Commit → Push\n')

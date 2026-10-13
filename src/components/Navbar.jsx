@@ -25,6 +25,9 @@ export default function Navbar({ theme, toggleTheme }) {
         <NavLink to="/portfolios" className={({ isActive }) => 'navbar-link' + (isActive ? ' active' : '')}>
           Portfólios
         </NavLink>
+        <NavLink to="/biblioteca" className={({ isActive }) => 'navbar-link' + (isActive ? ' active' : '')}>
+          Biblioteca
+        </NavLink>
         <NavLink to="/sobre" className={({ isActive }) => 'navbar-link' + (isActive ? ' active' : '')}>
           Sobre o Método
         </NavLink>

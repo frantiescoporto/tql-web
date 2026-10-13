@@ -1,248 +1,306 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useData } from '../context/DataContext.jsx'
+import '../styles/biblioteca.css'
+
+// ── Planos de aquisição ───────────────────────────────────────────────────────
+// Preencha price (ex.: 'R$ 497') e checkout (link Greenn) quando estiverem definidos.
+// Sem checkout, o botão abre o WhatsApp já com o plano escolhido.
+const WHATSAPP = '5553999010262'
+const PLANOS = [
+  {
+    key: 'p5', qtd: 5, title: 'Seleção 5',
+    text: 'Para começar a automatizar com um grupo enxuto e diversificado.',
+    perks: ['5 estratégias à sua escolha', 'Arquivo .AUT pronto para importar', 'Configurações já ajustadas'],
+    price: null, checkout: null,
+  },
+  {
+    key: 'p20', qtd: 20, title: 'Coleção 20', featured: true,
+    text: 'Para montar um portfólio com vários ativos, tempos gráficos e estilos.',
+    perks: ['20 estratégias à sua escolha', 'Arquivo .AUT pronto para importar', 'Configurações já ajustadas', 'Mistura de day trade e swing'],
+    price: null, checkout: null,
+  },
+  {
+    key: 'all', qtd: null, title: 'Biblioteca completa',
+    text: 'Todas as estratégias publicadas na biblioteca, em um único arquivo.',
+    perks: ['Todas as estratégias TQL', 'Arquivo .AUT pronto para importar', 'Configurações já ajustadas'],
+    price: null, checkout: null,
+  },
+]
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
-function calcMetrics(robot) {
-  const ops = robot.operations || []
-  if (!ops.length) return { winRate: null, avgMonthly: null, createdAt: null }
+const brl = v => (v < 0 ? '-' : '') + 'R$ ' + Math.abs(Math.round(v)).toLocaleString('pt-BR')
+const fmtDate = iso => {
+  if (!iso) return '—'
+  const [y, m, d] = iso.split('-')
+  return `${d}/${m}/${y}`
+}
+const MESES = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez']
+const fmtMonth = ym => { const [y, m] = ym.split('-'); return `${MESES[+m - 1]}/${y}` }
+const dirLabel = d => d === 'long' ? 'Só compra' : d === 'short' ? 'Só venda' : d === 'both' ? 'Compra e venda' : null
 
-  // Data de criação = primeira operação
-  const dateKey = s => {
-    if (!s) return 0
-    const p = s.split(' ')[0].split('/')
-    if (p.length < 3) return 0
-    return +p[2] * 10000 + +p[1] * 100 + +p[0]
-  }
-  const sorted = [...ops].sort((a, b) => dateKey(a.abertura) - dateKey(b.abertura))
-  const createdAt = sorted[0]?.abertura?.split(' ')[0] || null
-
-  // Taxa de acerto
-  const wins = ops.filter(o => (o.res_op || 0) > 0).length
-  const winRate = ops.length ? Math.round((wins / ops.length) * 100) : null
-
-  // Resultado médio mensal com 1 contrato
-  const byMonth = {}
-  for (const op of ops) {
-    if (!op.abertura) continue
-    const p = op.abertura.split(' ')[0].split('/')
-    if (p.length < 3) continue
-    const key = `${p[2]}-${p[1]}`
-    if (!byMonth[key]) byMonth[key] = 0
-    byMonth[key] += (op.res_op || 0)
-  }
-  const months = Object.values(byMonth)
-  const avgMonthly = months.length
-    ? Math.round(months.reduce((a, b) => a + b, 0) / months.length)
-    : null
-
-  return { winRate, avgMonthly, createdAt }
+function pathFor(values, w, h, pad = 2) {
+  if (!values || values.length < 2) return { line: '', area: '', zeroY: null }
+  const min = Math.min(0, ...values), max = Math.max(0, ...values)
+  const span = max - min || 1
+  const x = i => (i / (values.length - 1)) * w
+  const y = v => pad + (1 - (v - min) / span) * (h - pad * 2)
+  const line = values.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join('')
+  const area = `${line}L${w},${y(min).toFixed(1)}L0,${y(min).toFixed(1)}Z`
+  return { line, area, zeroY: y(0) }
 }
 
-function formatDate(ddmmyyyy) {
-  if (!ddmmyyyy) return '—'
-  const p = ddmmyyyy.split('/')
-  if (p.length < 3) return ddmmyyyy
-  return `${p[2].slice(2)}/${p[1]}/${p[0]}`   // YY/MM/DD → e.g. 19/04/02
-}
-
-// ── Componente ────────────────────────────────────────────────────────────────
-export default function BibliotecaPage() {
-  const { robots, loading } = useData()
-  const [sort, setSort] = useState('name')
-  const [search, setSearch] = useState('')
-
-  // Filtra só TQL_xxx e aplica busca
-  const tqlRobots = useMemo(() => {
-    return robots
-      .filter(r => r.name && r.name.toUpperCase().startsWith('TQL_'))
-      .filter(r => !search || r.name.toLowerCase().includes(search.toLowerCase()))
-  }, [robots, search])
-
-  // Calcula métricas e ordena
-  const rows = useMemo(() => {
-    const withMetrics = tqlRobots.map(r => ({ ...r, _m: calcMetrics(r) }))
-    return withMetrics.sort((a, b) => {
-      if (sort === 'name')       return a.name.localeCompare(b.name)
-      if (sort === 'winRate')    return (b._m.winRate || 0) - (a._m.winRate || 0)
-      if (sort === 'avgMonthly') return (b._m.avgMonthly || 0) - (a._m.avgMonthly || 0)
-      if (sort === 'date')       return (a._m.createdAt || '').localeCompare(b._m.createdAt || '')
-      return 0
-    })
-  }, [tqlRobots, sort])
-
-  if (loading) return (
-    <div className="page-container" style={{ textAlign: 'center', paddingTop: 80 }}>
-      <p style={{ color: 'var(--text-secondary)' }}>Carregando biblioteca...</p>
-    </div>
+function Spark({ values }) {
+  const { line } = pathFor(values, 128, 30)
+  return (
+    <svg className="bib-spark" viewBox="0 0 128 30" preserveAspectRatio="none" aria-hidden="true">
+      <path d={line} />
+    </svg>
   )
+}
+
+function InfoTip({ item }) {
+  const [open, setOpen] = useState(false)
+  const lines = item.desc || []
+  const dir = dirLabel(item.dir)
+  return (
+    <span className={'bib-q' + (open ? ' open' : '')} onMouseLeave={() => setOpen(false)}>
+      <button type="button" aria-label={`Sobre a ${item.name}`} onClick={() => setOpen(o => !o)}>?</button>
+      <span className="bib-pop" role="tooltip">
+        <strong>
+          {[item.motor, item.mode === 'swing' ? 'swing trade' : 'day trade'].filter(Boolean).join(', ')}
+          {dir ? `. ${dir}` : ''}
+        </strong>
+        {lines.length > 0
+          ? <ul>{lines.map((l, i) => <li key={i}>{l}</li>)}</ul>
+          : <span className="bib-mute">Descrição detalhada em breve.</span>}
+        <span className="bib-pop-stats">
+          <span><b>{item.nOps}</b> operações</span>
+          {item.since && <span>desde <b>{item.since}</b></span>}
+          {item.posMonths != null && <span><b>{item.posMonths}%</b> meses positivos</span>}
+        </span>
+      </span>
+    </span>
+  )
+}
+
+function planHref(plan) {
+  if (plan.checkout) return plan.checkout
+  const msg = `Olá! Quero adquirir o plano ${plan.title} da Biblioteca TQL.`
+  return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`
+}
+
+// ── Página ────────────────────────────────────────────────────────────────────
+export default function BibliotecaPage() {
+  const [data, setData] = useState(null)
+  const [error, setError] = useState(null)
+  const [estilo, setEstilo] = useState('all')
+  const [ativo, setAtivo] = useState('all')
+  const [sort, setSort] = useState('media')
+
+  useEffect(() => {
+    fetch('/data/biblioteca.json?cb=' + Date.now())
+      .then(r => { if (!r.ok) throw new Error(); return r.json() })
+      .then(setData)
+      .catch(() => setError('Não foi possível carregar a biblioteca. Atualize a página para tentar de novo.'))
+  }, [])
+
+  const items = data?.items || []
+  const ativos = useMemo(() => [...new Set(items.map(i => i.ativo).filter(Boolean))].sort(), [items])
+
+  const rows = useMemo(() => {
+    const list = items
+      .filter(i => estilo === 'all' || i.mode === estilo)
+      .filter(i => ativo === 'all' || i.ativo === ativo)
+    const by = {
+      media: (a, b) => (b.avgMonthly ?? -1e9) - (a.avgMonthly ?? -1e9),
+      acerto: (a, b) => (b.winRate ?? -1) - (a.winRate ?? -1),
+      recentes: (a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''),
+      nome: (a, b) => a.name.localeCompare(b.name, 'pt-BR', { numeric: true }),
+    }
+    return [...list].sort(by[sort])
+  }, [items, estilo, ativo, sort])
+
+  const combined = data?.combined || []
+  const curve = useMemo(() => pathFor(combined.map(c => c.v), 600, 190, 6), [combined])
+  const nDay = items.filter(i => i.mode === 'day').length
+  const nSwing = items.length - nDay
+  const firstYear = combined[0]?.m.slice(0, 4)
 
   return (
-    <div className="page-container">
-      {/* Header */}
-      <div style={{ marginBottom: 32 }}>
-        <h1 style={{ fontSize: 28, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 8 }}>
-          📚 Biblioteca de Algoritmos
-        </h1>
-        <p style={{ color: 'var(--text-secondary)', fontSize: 15 }}>
-          {rows.length} estratégias desenvolvidas pelo Método 6015 — disponíveis para aquisição individual.
-        </p>
-      </div>
+    <main className="bib">
+      <section className="bib-hero">
+        <div>
+          <h1>Biblioteca de algoritmos TQL</h1>
+          <p>
+            Estratégias para o Profit criadas no TQL Studio e validadas pelo Método 6015.
+            Você escolhe o pacote e recebe um arquivo .AUT com tudo configurado, pronto para ligar.
+          </p>
+          <div className="bib-hero-actions">
+            <a className="bib-btn solid" href="#planos">Ver pacotes</a>
+            <a className="bib-btn ghost" href="#estrategias">Explorar estratégias</a>
+          </div>
+        </div>
 
-      {/* Controles */}
-      <div style={{
-        display: 'flex', flexWrap: 'wrap', gap: 12,
-        marginBottom: 24, alignItems: 'center'
-      }}>
-        <input
-          type="text"
-          placeholder="Buscar estratégia..."
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-          style={{
-            padding: '8px 14px', borderRadius: 8, border: '1px solid var(--border)',
-            background: 'var(--surface)', color: 'var(--text-primary)',
-            fontSize: 14, flex: '1 1 200px', minWidth: 160
-          }}
-        />
-        <div style={{ display: 'flex', gap: 8 }}>
-          {[
-            { key: 'name', label: 'Nome' },
-            { key: 'winRate', label: 'Acerto' },
-            { key: 'avgMonthly', label: 'Resultado' },
-            { key: 'date', label: 'Data' },
-          ].map(s => (
-            <button
-              key={s.key}
-              onClick={() => setSort(s.key)}
-              style={{
-                padding: '7px 14px', borderRadius: 8, fontSize: 13, cursor: 'pointer',
-                border: '1px solid var(--border)',
-                background: sort === s.key ? 'var(--accent)' : 'var(--surface)',
-                color: sort === s.key ? '#fff' : 'var(--text-secondary)',
-                fontWeight: sort === s.key ? 600 : 400,
-              }}
-            >
-              {s.label}
-            </button>
+        <div className="bib-curve-wrap" aria-label="Curva combinada das estratégias">
+          {combined.length > 1 && (
+            <>
+              <div className="bib-curve-head">
+                <span className="bib-curve-total">{brl(combined[combined.length - 1].v)}</span>
+                <span className="bib-curve-cap">
+                  Resultado acumulado da biblioteca<br />1 contrato por estratégia, em backtest
+                </span>
+              </div>
+              <svg className="bib-curve" viewBox="0 0 600 190" preserveAspectRatio="none" role="img"
+                aria-label={`Curva acumulada de ${fmtMonth(combined[0].m)} a ${fmtMonth(combined[combined.length - 1].m)}`}>
+                {curve.zeroY != null && <line className="zero" x1="0" x2="600" y1={curve.zeroY} y2={curve.zeroY} />}
+                <path className="area" d={curve.area} />
+                <path className="line" d={curve.line} />
+              </svg>
+              <div className="bib-curve-axis">
+                <span>{fmtMonth(combined[0].m)}</span>
+                <span>{fmtMonth(combined[combined.length - 1].m)}</span>
+              </div>
+            </>
+          )}
+        </div>
+      </section>
+
+      {items.length > 0 && (
+        <section className="bib-facts" aria-label="Resumo">
+          <div className="bib-fact"><b>{items.length}</b><span>estratégias publicadas</span></div>
+          <div className="bib-fact"><b>{ativos.join(', ')}</b><span>ativos cobertos</span></div>
+          <div className="bib-fact">
+            <b>{nSwing ? `${nDay} / ${nSwing}` : nDay}</b>
+            <span>{nSwing ? 'day trade / swing trade' : 'em day trade'}</span>
+          </div>
+          <div className="bib-fact"><b>{firstYear ? new Date().getFullYear() - +firstYear : '—'} anos</b><span>de histórico testado</span></div>
+        </section>
+      )}
+
+      <section className="bib-sec" id="estrategias">
+        <div className="bib-sec-head">
+          <div>
+            <h2>Estratégias</h2>
+            <p>Passe o mouse no ? para ver como cada estratégia opera. Valores com 1 contrato.</p>
+          </div>
+          <div className="bib-controls">
+            <div className="bib-seg" role="group" aria-label="Estilo">
+              {[['all', 'Todas'], ['day', 'Day trade'], ['swing', 'Swing']].map(([k, l]) => (
+                <button key={k} aria-pressed={estilo === k} onClick={() => setEstilo(k)}>{l}</button>
+              ))}
+            </div>
+            {ativos.length > 1 && (
+              <div className="bib-seg" role="group" aria-label="Ativo">
+                {[['all', 'Todos'], ...ativos.map(a => [a, a])].map(([k, l]) => (
+                  <button key={k} aria-pressed={ativo === k} onClick={() => setAtivo(k)}>{l}</button>
+                ))}
+              </div>
+            )}
+            <select className="bib-select" value={sort} onChange={e => setSort(e.target.value)} aria-label="Ordenar por">
+              <option value="media">Maior média mensal</option>
+              <option value="acerto">Maior taxa de acerto</option>
+              <option value="recentes">Mais recentes</option>
+              <option value="nome">Nome</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="bib-ledger" role="table" aria-label="Estratégias da biblioteca">
+          <div className="bib-row head" role="row">
+            <span role="columnheader">Estratégia</span>
+            <span role="columnheader">Criada em</span>
+            <span role="columnheader">Ativo</span>
+            <span role="columnheader">Tempo gráfico</span>
+            <span role="columnheader">Estilo</span>
+            <span role="columnheader" className="bib-r">Acerto</span>
+            <span role="columnheader" className="bib-r">Média mensal</span>
+            <span role="columnheader" className="bib-c-spark">Curva</span>
+            <span role="columnheader" />
+          </div>
+
+          {!data && !error && <div className="bib-empty">Carregando estratégias…</div>}
+          {error && <div className="bib-empty">{error}</div>}
+          {data && rows.length === 0 && (
+            <div className="bib-empty">Nenhuma estratégia com esses filtros. Troque o estilo ou o ativo.</div>
+          )}
+
+          {rows.map(i => (
+            <div className="bib-row" role="row" key={i.id}>
+              <span className="bib-c-name bib-name" role="cell">{i.name}<InfoTip item={i} /></span>
+              <span className="bib-c-criada bib-mute" role="cell" data-l="Criada em">{fmtDate(i.createdAt)}</span>
+              <span className="bib-c-ativo" role="cell" data-l="Ativo">{i.ativo || '—'}</span>
+              <span className="bib-c-tf" role="cell" data-l="Tempo gráfico">{i.timeframe || '—'}</span>
+              <span className={'bib-c-estilo bib-style ' + i.mode} role="cell" data-l="Estilo">
+                <i aria-hidden="true" />{i.mode === 'swing' ? 'Swing trade' : 'Day trade'}
+              </span>
+              <span className="bib-c-acerto bib-r" role="cell" data-l="Acerto">
+                {i.winRate != null ? `${i.winRate.toFixed(0)}%` : '—'}
+              </span>
+              <span className={'bib-c-media bib-r ' + ((i.avgMonthly ?? 0) >= 0 ? 'bib-pos' : 'bib-neg')} role="cell" data-l="Média mensal">
+                {i.avgMonthly != null ? brl(i.avgMonthly) : '—'}
+              </span>
+              <span className="bib-c-spark" role="cell"><Spark values={i.curve} /></span>
+              <span className="bib-c-more" role="cell" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <Link className="bib-more" to={`/robots/${i.id}`}>Ver +</Link>
+              </span>
+            </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      {/* Tabela */}
-      <div style={{ overflowX: 'auto' }}>
-        <table style={{
-          width: '100%', borderCollapse: 'collapse', fontSize: 14
-        }}>
-          <thead>
-            <tr style={{ borderBottom: '2px solid var(--border)' }}>
-              {['Estratégia', 'Criação', 'Ativo', 'Timeframe', 'Acerto', 'Média Mensal (1 contrato)', ''].map((h, i) => (
-                <th key={i} style={{
-                  padding: '10px 14px', textAlign: i >= 4 ? 'center' : 'left',
-                  color: 'var(--text-secondary)', fontWeight: 600, fontSize: 13,
-                  whiteSpace: 'nowrap'
-                }}>{h}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {rows.length === 0 && (
-              <tr>
-                <td colSpan={7} style={{ textAlign: 'center', padding: 40, color: 'var(--text-secondary)' }}>
-                  Nenhuma estratégia encontrada.
-                </td>
-              </tr>
-            )}
-            {rows.map((r, i) => {
-              const { winRate, avgMonthly, createdAt } = r._m
-              return (
-                <tr key={r.id} style={{
-                  borderBottom: '1px solid var(--border)',
-                  background: i % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.02)',
-                  transition: 'background 0.15s'
-                }}
-                  onMouseEnter={e => e.currentTarget.style.background = 'rgba(99,102,241,0.08)'}
-                  onMouseLeave={e => e.currentTarget.style.background = i % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.02)'}
-                >
-                  {/* Nome */}
-                  <td style={{ padding: '12px 14px', fontWeight: 600, color: 'var(--text-primary)' }}>
-                    {r.name}
-                  </td>
-                  {/* Data criação */}
-                  <td style={{ padding: '12px 14px', color: 'var(--text-secondary)', whiteSpace: 'nowrap' }}>
-                    {formatDate(createdAt)}
-                  </td>
-                  {/* Ativo */}
-                  <td style={{ padding: '12px 14px' }}>
-                    <span style={{
-                      display: 'inline-block', padding: '2px 10px', borderRadius: 20,
-                      background: 'rgba(99,102,241,0.15)', color: '#818cf8',
-                      fontSize: 12, fontWeight: 600
-                    }}>
-                      {r.ativo || '—'}
-                    </span>
-                  </td>
-                  {/* Timeframe */}
-                  <td style={{ padding: '12px 14px', color: 'var(--text-secondary)', textAlign: 'center' }}>
-                    {r.timeframe || '—'}
-                  </td>
-                  {/* Taxa de acerto */}
-                  <td style={{ padding: '12px 14px', textAlign: 'center' }}>
-                    {winRate !== null ? (
-                      <span style={{
-                        fontWeight: 700,
-                        color: winRate >= 60 ? '#22c55e' : winRate >= 50 ? '#f59e0b' : '#ef4444'
-                      }}>
-                        {winRate}%
-                      </span>
-                    ) : <span style={{ color: 'var(--text-secondary)' }}>—</span>}
-                  </td>
-                  {/* Resultado médio mensal */}
-                  <td style={{ padding: '12px 14px', textAlign: 'center' }}>
-                    {avgMonthly !== null ? (
-                      <span style={{
-                        fontWeight: 700,
-                        color: avgMonthly >= 0 ? '#22c55e' : '#ef4444'
-                      }}>
-                        {avgMonthly >= 0 ? '+' : ''}
-                        {avgMonthly.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
-                      </span>
-                    ) : <span style={{ color: 'var(--text-secondary)' }}>—</span>}
-                  </td>
-                  {/* Botão */}
-                  <td style={{ padding: '12px 14px', textAlign: 'center' }}>
-                    <Link
-                      to={`/robots/${r.id}`}
-                      style={{
-                        display: 'inline-block', padding: '6px 16px', borderRadius: 8,
-                        background: 'var(--accent)', color: '#fff',
-                        fontSize: 13, fontWeight: 600, textDecoration: 'none',
-                        whiteSpace: 'nowrap',
-                        transition: 'opacity 0.15s'
-                      }}
-                      onMouseEnter={e => e.currentTarget.style.opacity = '0.85'}
-                      onMouseLeave={e => e.currentTarget.style.opacity = '1'}
-                    >
-                      VER +
-                    </Link>
-                  </td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
-      </div>
+      <section className="bib-sec" id="planos">
+        <div className="bib-sec-head">
+          <div>
+            <h2>Escolha o tamanho do seu pacote</h2>
+            <p>As estratégias são vendidas em grupos. Quanto maior o pacote, mais diversificado fica o seu portfólio.</p>
+          </div>
+        </div>
+        <div className="bib-plans">
+          {PLANOS.map(p => (
+            <div key={p.key} className={'bib-plan' + (p.featured ? ' featured' : '')}>
+              {p.featured && <span className="bib-tag">Mais escolhido</span>}
+              <div className="bib-plan-n">
+                {p.qtd ?? items.length}
+                <small>estratégias</small>
+              </div>
+              <h3>{p.title}</h3>
+              <p>{p.text}</p>
+              <ul>{p.perks.map(k => <li key={k}>{k}</li>)}</ul>
+              <div className="bib-plan-price">
+                {p.price || 'Valor sob consulta'}
+                <span>{p.price ? 'pagamento único' : 'Fale com a gente pelo WhatsApp'}</span>
+              </div>
+              <a className={'bib-btn ' + (p.featured ? 'solid' : 'ghost')} href={planHref(p)} target="_blank" rel="noreferrer" aria-label={`Quero o pacote ${p.title}`}>
+                Quero este pacote
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      {/* Rodapé informativo */}
-      <div style={{
-        marginTop: 40, padding: 20, borderRadius: 12,
-        background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)'
-      }}>
-        <p style={{ color: 'var(--text-secondary)', fontSize: 13, margin: 0, textAlign: 'center' }}>
-          📊 Resultados baseados em backtest histórico. Resultados passados não garantem resultados futuros.
-          A média mensal é calculada com 1 contrato — resultados escalam proporcionalmente à quantidade de contratos.
-        </p>
-      </div>
-    </div>
+      <section className="bib-sec">
+        <div className="bib-sec-head"><div><h2>Como você recebe</h2></div></div>
+        <div className="bib-steps">
+          <div className="bib-step">
+            <h3>Escolha o pacote</h3>
+            <p>Selecione 5, 20 ou a biblioteca completa e quais estratégias quer no seu grupo.</p>
+          </div>
+          <div className="bib-step">
+            <h3>Receba o arquivo</h3>
+            <p>Você recebe um <span className="bib-file">.AUT</span> com todas as estratégias e configurações já prontas.</p>
+          </div>
+          <div className="bib-step">
+            <h3>Importe no Profit</h3>
+            <p>Abra o arquivo no módulo de automação do Profit, defina o número de contratos e ligue.</p>
+          </div>
+        </div>
+      </section>
+
+      <p className="bib-note">
+        Resultados obtidos em backtest com 1 contrato, sem custos operacionais. A média mensal considera todos os
+        meses do período testado. Resultados passados não garantem resultados futuros. Operar no mercado
+        financeiro envolve risco de perda.
+      </p>
+    </main>
   )
 }

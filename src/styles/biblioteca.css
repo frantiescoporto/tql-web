@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');
+
+/* Biblioteca TQL — escopo .bib (respeita tema claro/escuro do site) */
+.bib {
+  --b-ink: var(--text);
+  --b-mute: var(--text-muted);
+  --b-line: var(--border);
+  --b-panel: var(--surface);
+  --b-teal: #00b894;
+  --b-teal-soft: rgba(0, 184, 148, .12);
+  --b-pos: #1fa971;
+  --b-neg: #e05252;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-feature-settings: 'tnum' 1;
+  color: var(--b-ink);
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 24px 24px;
+}
+html.theme-dark .bib, :root:not(.theme-light) .bib {
+  --b-teal: #00d4aa;
+  --b-teal-soft: rgba(0, 212, 170, .10);
+  --b-pos: #37e29b;
+  --b-neg: #ff6b6b;
+}
+html.theme-light .bib {
+  --b-teal: #00a383;
+  --b-teal-soft: rgba(0, 163, 131, .10);
+  --b-pos: #13965f;
+  --b-neg: #d43f3f;
+}
+.bib a { color: inherit; }
+.bib :focus-visible { outline: 2px solid var(--b-teal); outline-offset: 2px; border-radius: 4px; }
+
+/* ── Hero ─────────────────────────────────────────────── */
+.bib-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 48px;
+  align-items: end;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--b-line);
+}
+.bib-hero h1 {
+  font-size: clamp(34px, 4.6vw, 56px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 650;
+  max-width: 12ch;
+}
+.bib-hero p {
+  margin-top: 18px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--b-mute);
+  max-width: 46ch;
+}
+.bib-hero-actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+
+.bib-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 44px; padding: 0 22px; border-radius: 999px;
+  font: 600 14px/1 inherit; font-family: inherit;
+  text-decoration: none; cursor: pointer; border: 1px solid transparent;
+  transition: background .15s, border-color .15s, color .15s;
+}
+.bib-btn.solid { background: var(--b-teal); color: #04140f; }
+.bib-btn.solid:hover { filter: brightness(1.07); }
+.bib-btn.ghost { border-color: var(--b-line); color: var(--b-ink); background: transparent; }
+.bib-btn.ghost:hover { border-color: var(--b-teal); color: var(--b-teal); }
+
+.bib-curve-wrap { position: relative; }
+.bib-curve-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 10px; }
+.bib-curve-total { white-space: nowrap; font-size: clamp(28px, 3.4vw, 40px); font-weight: 650; letter-spacing: -0.03em; color: var(--b-pos); }
+.bib-curve-cap { font-size: 13px; color: var(--b-mute); text-align: right; line-height: 1.4; }
+.bib-curve { width: 100%; height: 190px; display: block; overflow: visible; }
+.bib-curve .area { fill: var(--b-teal-soft); }
+.bib-curve .line { fill: none; stroke: var(--b-teal); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.bib-curve .zero { stroke: var(--b-line); stroke-dasharray: 3 4; vector-effect: non-scaling-stroke; }
+.bib-curve-axis { display: flex; justify-content: space-between; font-size: 12px; color: var(--b-mute); margin-top: 6px; }
+@media (prefers-reduced-motion: no-preference) {
+  .bib-curve .line { stroke-dasharray: 2400; stroke-dashoffset: 2400; animation: bib-draw 1.6s cubic-bezier(.3,.7,.2,1) .15s forwards; }
+  .bib-curve .area { opacity: 0; animation: bib-fade .8s ease 1.1s forwards; }
+}
+@keyframes bib-draw { to { stroke-dashoffset: 0; } }
+@keyframes bib-fade { to { opacity: 1; } }
+
+/* ── Facts ────────────────────────────────────────────── */
+.bib-facts { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--b-line); }
+.bib-fact { padding: 22px 0; }
+.bib-fact + .bib-fact { padding-left: 24px; border-left: 1px solid var(--b-line); }
+.bib-fact b { display: block; font-size: 26px; font-weight: 600; letter-spacing: -0.02em; }
+.bib-fact span { font-size: 13px; color: var(--b-mute); }
+
+/* ── Section heads ────────────────────────────────────── */
+.bib-sec { padding-top: 64px; }
+.bib-sec-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
+.bib-sec-head h2 { font-size: 28px; font-weight: 650; letter-spacing: -0.025em; }
+.bib-sec-head p { color: var(--b-mute); font-size: 15px; margin-top: 6px; max-width: 60ch; }
+
+/* ── Controls ─────────────────────────────────────────── */
+.bib-controls { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.bib-seg { display: inline-flex; border: 1px solid var(--b-line); border-radius: 999px; padding: 3px; }
+.bib-seg button {
+  border: 0; background: transparent; color: var(--b-mute);
+  font: 500 13px/1 inherit; font-family: inherit;
+  padding: 8px 14px; border-radius: 999px; cursor: pointer;
+}
+.bib-seg button[aria-pressed="true"] { background: var(--b-ink); color: var(--bg); }
+.bib-select {
+  height: 36px; border-radius: 999px; border: 1px solid var(--b-line);
+  background: transparent; color: var(--b-ink); padding: 0 14px;
+  font: 500 13px inherit; font-family: inherit; cursor: pointer;
+}
+.bib-select option { background: var(--b-panel); color: var(--b-ink); }
+
+/* ── Ledger ───────────────────────────────────────────── */
+.bib-ledger { border-top: 1px solid var(--b-ink); }
+.bib-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 1.5fr) 96px 64px 96px 96px 70px 120px 128px 72px;
+  align-items: center; gap: 12px;
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--b-line);
+  font-size: 14px;
+}
+.bib-row.head { font-size: 12px; color: var(--b-mute); padding-top: 12px; padding-bottom: 12px; }
+.bib-row:not(.head):hover { background: var(--b-teal-soft); }
+.bib-r { text-align: right; }
+.bib-name { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; letter-spacing: -0.01em; }
+.bib-mute { color: var(--b-mute); }
+.bib-pos { color: var(--b-pos); font-weight: 600; }
+.bib-neg { color: var(--b-neg); font-weight: 600; }
+.bib-style { font-size: 13px; }
+.bib-style i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 7px; vertical-align: 1px; background: var(--b-teal); }
+.bib-style.swing i { background: transparent; border: 1.5px solid var(--b-teal); }
+.bib-spark { width: 128px; height: 30px; display: block; }
+.bib-spark path { fill: none; stroke: var(--b-teal); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.bib-more {
+  justify-self: end; font-size: 13px; font-weight: 600; text-decoration: none;
+  padding: 7px 12px; border-radius: 999px; border: 1px solid var(--b-line);
+}
+.bib-more:hover { border-color: var(--b-teal); color: var(--b-teal); }
+
+/* Tooltip "?" */
+.bib-q { position: relative; display: inline-flex; }
+.bib-q > button {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 1px solid var(--b-line); background: transparent; color: var(--b-mute);
+  font: 600 11px/1 inherit; font-family: inherit; cursor: help; padding: 0;
+}
+.bib-q > button:hover, .bib-q.open > button { border-color: var(--b-teal); color: var(--b-teal); }
+.bib-pop {
+  position: absolute; left: 50%; top: calc(100% + 10px); transform: translateX(-30%);
+  width: 340px; z-index: 30;
+  background: var(--b-panel); border: 1px solid var(--b-line); border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.28);
+  padding: 16px 18px; font-weight: 400; font-size: 13px; line-height: 1.5; color: var(--b-ink);
+  visibility: hidden; opacity: 0; transition: opacity .12s, visibility .12s;
+  text-align: left;
+}
+.bib-q:hover .bib-pop, .bib-q:focus-within .bib-pop, .bib-q.open .bib-pop { visibility: visible; opacity: 1; }
+.bib-pop strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+.bib-pop ul { list-style: none; display: grid; gap: 6px; }
+.bib-pop li { color: var(--b-mute); padding-left: 12px; position: relative; }
+.bib-pop li::before { content: ''; position: absolute; left: 0; top: .62em; width: 4px; height: 4px; border-radius: 50%; background: var(--b-teal); }
+.bib-pop .bib-pop-stats { display: flex; gap: 18px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--b-line); color: var(--b-mute); font-size: 12px; }
+.bib-pop .bib-pop-stats b { color: var(--b-ink); font-weight: 600; }
+
+.bib-empty { padding: 48px 0; text-align: center; color: var(--b-mute); }
+
+/* ── Plans ────────────────────────────────────────────── */
+.bib-plans { display: grid; grid-template-columns: 1fr 1.08fr 1fr; border: 1px solid var(--b-line); border-radius: 18px; overflow: hidden; }
+.bib-plan { position: relative; padding: 32px 28px; display: flex; flex-direction: column; gap: 16px; }
+.bib-plan + .bib-plan { border-left: 1px solid var(--b-line); }
+.bib-plan.featured { background: var(--b-teal-soft); }
+.bib-plan-n { font-size: 64px; line-height: .9; font-weight: 650; letter-spacing: -0.05em; }
+.bib-plan-n small { font-size: 16px; font-weight: 500; letter-spacing: 0; color: var(--b-mute); margin-left: 8px; }
+.bib-plan h3 { font-size: 18px; font-weight: 600; }
+.bib-plan p { color: var(--b-mute); font-size: 14px; line-height: 1.55; }
+.bib-plan ul { list-style: none; display: grid; gap: 8px; font-size: 14px; }
+.bib-plan li { padding-left: 22px; position: relative; }
+.bib-plan li::before { content: ''; position: absolute; left: 2px; top: .45em; width: 10px; height: 5px; border-left: 2px solid var(--b-teal); border-bottom: 2px solid var(--b-teal); transform: rotate(-45deg); }
+.bib-plan-price { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; margin-top: auto; }
+.bib-plan-price span { display: block; font-size: 13px; font-weight: 400; color: var(--b-mute); letter-spacing: 0; margin-top: 2px; }
+.bib-plan .bib-btn { width: 100%; }
+.bib-tag { position: absolute; top: 24px; right: 24px; font-size: 12px; font-weight: 600; color: var(--b-teal); border: 1px solid var(--b-teal); border-radius: 999px; padding: 4px 10px; }
+
+/* ── Steps (sequência real de entrega) ────────────────── */
+.bib-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; counter-reset: s; }
+.bib-step { padding-top: 18px; border-top: 1px solid var(--b-line); }
+.bib-step::before { counter-increment: s; content: counter(s); display: block; font-size: 15px; font-weight: 600; color: var(--b-teal); margin-bottom: 10px; }
+.bib-step h3 { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+.bib-step p { color: var(--b-mute); font-size: 14px; line-height: 1.55; }
+.bib-file { display: inline-block; font-weight: 600; color: var(--b-ink); background: var(--b-teal-soft); padding: 1px 7px; border-radius: 6px; }
+
+.bib-note { margin-top: 56px; font-size: 13px; line-height: 1.6; color: var(--b-mute); max-width: 80ch; }
+
+/* ── Responsivo ───────────────────────────────────────── */
+@media (max-width: 1020px) {
+  .bib-row { grid-template-columns: minmax(130px, 1.5fr) 88px 56px 84px 90px 64px 110px 64px; }
+  .bib-row .bib-c-spark { display: none; }
+}
+@media (max-width: 860px) {
+  .bib { padding-top: 32px; }
+  .bib-hero { grid-template-columns: 1fr; gap: 32px; }
+  .bib-facts { grid-template-columns: repeat(2, 1fr); }
+  .bib-fact:nth-child(3) { padding-left: 0; border-left: 0; }
+  .bib-fact:nth-child(n+3) { border-top: 1px solid var(--b-line); }
+  .bib-plans { grid-template-columns: 1fr; }
+  .bib-plan + .bib-plan { border-left: 0; border-top: 1px solid var(--b-line); }
+  .bib-steps { grid-template-columns: 1fr; gap: 20px; }
+  .bib-row.head { display: none; }
+  .bib-row {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "name name more"
+      "ativo tf estilo"
+      "criada acerto media";
+    row-gap: 10px; padding: 16px 2px;
+  }
+  .bib-row .bib-c-name { grid-area: name; }
+  .bib-row .bib-c-more { grid-area: more; }
+  .bib-row .bib-c-ativo { grid-area: ativo; }
+  .bib-row .bib-c-tf { grid-area: tf; }
+  .bib-row .bib-c-estilo { grid-area: estilo; }
+  .bib-row .bib-c-criada { grid-area: criada; }
+  .bib-row .bib-c-acerto { grid-area: acerto; text-align: left; }
+  .bib-row .bib-c-media { grid-area: media; text-align: left; }
+  .bib-row [data-l]::before { content: attr(data-l); display: block; font-size: 11px; color: var(--b-mute); font-weight: 400; margin-bottom: 2px; }
+  .bib-curve-cap { text-align: left; }
+  .bib-pop { width: min(300px, calc(100vw - 48px)); transform: translateX(-20%); }
+}
