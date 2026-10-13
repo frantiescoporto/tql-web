@@ -72,6 +72,12 @@ function run(opts = {}) {
       .replace(/\s{2,}/g, ' ')
       .trim())
     .filter(l => !/^Motor:/i.test(l))
+    // não expõe parâmetros: descarta trechos com números (exceto horários das janelas)
+    .map(l => /^Janelas/i.test(l) ? l : l.split(' · ')
+      .map(f => f.replace(/\s*\([^)]*\d[^)]*\)/g, ''))
+      .filter(f => !/\d/.test(f.replace(/^[^:]+:\s*/, '')) || /^\D+:\s*\D*$/.test(f))
+      .join(' · '))
+    .filter(l => l && !/:\s*$/.test(l))
 
   // Fallback quando o Studio não tem descrição pronta: monta a partir da configuração
   const TRIG = {
@@ -106,16 +112,28 @@ function run(opts = {}) {
 
   const out = []
   const allMonths = {}
+  // Um item por nome TQL_NNN (se houver duplicado, fica o atualizado por último na plataforma)
+  const pick = new Map()
   for (const r of robots) {
+    if (!/^TQL_\d+/i.test(r.name || '') || r.arquivado) continue
+    const k = r.name.toUpperCase(), cur = pick.get(k)
+    const newer = !cur || String(r.updated_at || '') > String(cur.updated_at || '') ||
+      (String(r.updated_at || '') === String(cur.updated_at || '') && (r.operations || []).length > (cur.operations || []).length)
+    if (newer) pick.set(k, r)
+  }
+  for (const r of pick.values()) {
     const m = /^TQL_(\d+)/i.exec(r.name || '')
-    if (!m) continue
     const num = m[1]
-    const st  = library.find(x => String(x.name || '').startsWith(num + '_'))
+    const st  = library.find(x => x.tqlId === r.id) ||
+      library.find(x => String(x.name || '').startsWith(num + '_'))
     // robô "gêmeo" exportado do Studio para a plataforma (tem a descrição completa)
     const twin = robots.find(x => x !== r && String(x.name || '').startsWith(num + '_'))
 
     const ops = [...(r.operations || [])].sort((a, b) => dateKey(a.abertura) - dateKey(b.abertura))
-    const res = o => (o.res_op || 0) / (o.qtd || 1)   // normaliza para 1 contrato
+    // Resultado líquido por 1 lote-padrão: mesmo cálculo da plataforma (custo ida e volta descontado)
+    const L = r.lote_padrao > 0 ? r.lote_padrao : 1
+    const costPerTrade = ((r.corretagem || 0) + (r.emolumentos || 0)) * 2 * L
+    const res = o => (o.res_op || 0) / (((o.qtd > 0 ? o.qtd : 1) / L) || 1) - costPerTrade
 
     const wins = ops.filter(o => res(o) > 0).length
     const winRate = ops.length ? (wins / ops.length) * 100 : null
@@ -166,6 +184,9 @@ function run(opts = {}) {
       desc: descLines ? cleanDesc(descLines) : descFromSt(st?.st),
       studioName: st?.name || twin?.name || null,
       nOps: ops.length,
+      costPerTrade: +costPerTrade.toFixed(2),
+      totalCosts: Math.round(costPerTrade * ops.length),
+      costSource: r.costSource || 'plataforma',
       since: ops.length ? ops[0].abertura.split(' ')[0].split('/')[2] : null,
       winRate: winRate == null ? null : +winRate.toFixed(1),
       avgMonthly: avgMonthly == null ? null : Math.round(avgMonthly),

@@ -55,13 +55,26 @@ export function applyDesagio(val, pct) {
   return val
 }
 
-export function buildAdjOps(ops, desagio, tipo) {
+// Custo por operação (ida e volta) de 1 lote-padrão, igual à plataforma desktop:
+// (corretagem + emolumentos) por contrato × 2 lados × lote padrão
+export function robotCostPerTrade(robot) {
+  if (!robot) return 0
+  const L = robot.lote_padrao > 0 ? robot.lote_padrao : 1
+  return ((robot.corretagem || 0) + (robot.emolumentos || 0)) * 2 * L
+}
+
+export function buildAdjOps(ops, desagio, tipo, robot = null) {
   const pct = tipo === 'backtest' ? (desagio || 0) : 0
+  const L = robot && robot.lote_padrao > 0 ? robot.lote_padrao : 1
+  const cost = robotCostPerTrade(robot)
   let acc = 0
   return ops.map(op => {
-    const adj = applyDesagio(op.res_op, pct)
+    const q = op.qtd > 0 ? op.qtd : 1
+    const units = robot ? (q / L) || 1 : 1
+    let adj = applyDesagio(op.res_op, pct) / units
+    if (cost > 0) adj -= cost
     acc += adj
-    return { ...op, resAdj: adj, totalAdj: acc }
+    return { ...op, resAdj: adj, totalAdj: acc, custo: cost }
   })
 }
 

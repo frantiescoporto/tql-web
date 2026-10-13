@@ -20,7 +20,7 @@ export default function PortfoliosPage() {
         const entries = list.map(({ robotId, lots }) => {
           const r = robots.find(rb => rb.id === robotId)
           if (!r || !r.operations?.length) return null
-          const adj = buildAdjOps(r.operations, r.desagio || 0, r.tipo || 'backtest')
+          const adj = buildAdjOps(r.operations, r.desagio || 0, r.tipo || 'backtest', r)
           return { robot: r, lots, adjOps: adj }
         }).filter(Boolean)
         if (entries.length) {

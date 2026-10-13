@@ -67,7 +67,7 @@ export default function LandingPage() {
     const m = {}
     for (const r of robots) {
       if (r.operations?.length) {
-        const adj = buildAdjOps(r.operations, r.desagio || 0, r.tipo || 'backtest')
+        const adj = buildAdjOps(r.operations, r.desagio || 0, r.tipo || 'backtest', r)
         m[r.id] = calcMetrics(adj)
       }
     }

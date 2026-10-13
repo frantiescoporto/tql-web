@@ -42,16 +42,37 @@ const db = new Database(DB_PATH, { readonly: true })
 
 // ── 1. ROBÔS ──────────────────────────────────────────────────────────────────
 log('\n── Robôs ─────────────────────────────────────────')
-const robotRows = db.prepare(`SELECT id, name, ativo, tipo, desagio, strategy_type, timeframe, platform, observation FROM robots ORDER BY name`).all()
+const robotCols = new Set(db.prepare(`PRAGMA table_info(robots)`).all().map(c => c.name))
+const optCol = c => robotCols.has(c) ? c : `NULL AS ${c}`
+const robotRows = db.prepare(`SELECT id, name, ativo, tipo, desagio, strategy_type, timeframe, platform, observation,
+  ${optCol('corretagem')}, ${optCol('emolumentos')}, ${optCol('lote_padrao')}, ${optCol('updated_at')}, ${optCol('arquivado')}
+  FROM robots ORDER BY name`).all()
+
+// Custos padrão do TQL Studio: usados nas estratégias TQL_ que ficaram sem custo cadastrado
+// (ao salvar/renomear o robô na plataforma, os custos vindos do Studio eram zerados).
+const STUDIO_LAB = getArg('--studio') || path.join(os.homedir(), 'AppData', 'Roaming', 'TQL Studio', 'lab.json')
+let studioCosts = null
+try { studioCosts = JSON.parse(fs.readFileSync(STUDIO_LAB, 'utf8')).config?.costs || null } catch {}
+if (studioCosts) log(`Custos padrão do TQL Studio: emolumentos ${studioCosts.emolPerSide}/lado, corretagem ${studioCosts.corretagemPerSide}/lado`)
 
 const stmtOps     = db.prepare(`SELECT num, abertura, fechamento, lado, qtd, res_op, res_op_pct, tempo FROM operations WHERE robot_id = ? ORDER BY abertura`)
 const stmtRealOps = db.prepare(`SELECT abertura, fechamento, lado, qtd, res_op FROM real_operations WHERE robot_id = ? ORDER BY abertura`)
 const stmtPeriods = db.prepare(`SELECT in_sample_start, in_sample_end, out_sample_start, out_sample_end, paper_start, paper_end, periods_json FROM periods WHERE robot_id = ?`)
 
+const dateKey = s => {
+  const [d, t = ''] = String(s || '').split(' ')
+  const p = d.split('/')
+  if (p.length < 3) return 0
+  const hm = t.split(':')
+  return ((+p[2] * 100 + +p[1]) * 100 + +p[0]) * 1e6 + (+hm[0] || 0) * 1e4 + (+hm[1] || 0) * 100 + (+hm[2] || 0)
+}
+const sortByDate = arr => arr.sort((a, b) => dateKey(a.abertura) - dateKey(b.abertura))
+
 const robots = []
 for (const r of robotRows) {
-  const ops     = stmtOps.all(r.id)
-  const realOps = (() => { try { return stmtRealOps.all(r.id) } catch { return [] } })()
+  // DD/MM/AAAA não ordena como texto: ordena por data/hora real (senão DD, estagnação e M.6015 saem errados)
+  const ops     = sortByDate(stmtOps.all(r.id))
+  const realOps = (() => { try { return sortByDate(stmtRealOps.all(r.id)) } catch { return [] } })()
   const p       = (() => { try { return stmtPeriods.get(r.id) || {} } catch { return {} } })()
   robots.push({
     id: r.id, name: r.name, ativo: r.ativo,
@@ -60,10 +81,22 @@ for (const r of robotRows) {
     timeframe: r.timeframe || '',
     tipo: r.tipo || 'backtest',
     desagio: r.desagio || 0,
+    corretagem: r.corretagem || 0,
+    emolumentos: r.emolumentos || 0,
+    lote_padrao: r.lote_padrao > 0 ? r.lote_padrao : 1,
+    costSource: 'plataforma',
+    updated_at: r.updated_at || null,
+    arquivado: r.arquivado ? 1 : 0,
     observation: r.observation || '',
     periods: p, operations: ops, realOps,
   })
-  log(`  ✓ ${r.name.padEnd(32)} ${ops.length} BT  ${realOps.length} Real`)
+  const last = robots[robots.length - 1]
+  if (/^TQL_/i.test(r.name) && !(last.corretagem + last.emolumentos) && studioCosts) {
+    last.corretagem = studioCosts.corretagemPerSide || 0
+    last.emolumentos = studioCosts.emolPerSide || 0
+    last.costSource = 'studio'
+  }
+  log(`  ✓ ${r.name.padEnd(32)} ${ops.length} BT  ${realOps.length} Real  custo/op R$ ${((last.corretagem + last.emolumentos) * 2 * last.lote_padrao).toFixed(2)}${last.costSource === 'studio' ? ' (Studio)' : ''}`)
 }
 
 // ── 2. PORTFÓLIOS DO LAB ───────────────────────────────────────────────────────
@@ -95,6 +128,7 @@ try {
     FROM dash_operations
     ORDER BY abertura
   `).all()
+  sortByDate(dashOps)
   const uniq = new Set(dashOps.map(o => o.ativo)).size
   log(`  ${dashOps.length} operações | ${uniq} estratégias`)
 } catch { log('  Sem tabela dash_operations') }
@@ -133,7 +167,7 @@ for (const f of files) {
 }
 
 // Biblioteca TQL (cruza com o TQL Studio: criação, day/swing, descrição)
-try { require('./export-biblioteca.cjs').run({ robots, outDir: OUT_DIR }) }
+try { require('./export-biblioteca.cjs').run({ robots, outDir: OUT_DIR, studio: STUDIO_LAB }) }
 catch (e) { log(`Aviso: biblioteca.json não gerado: ${e.message}`) }
 
 log(`\nConcluído em: ${new Date().toLocaleString('pt-BR')}`)

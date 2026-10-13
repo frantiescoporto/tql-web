@@ -20,7 +20,7 @@ import { Chart, registerables } from 'chart.js'
 Chart.register(...registerables)
 
 export default function RobotDetail() {
-  const { getRobot, portfolios } = useData()
+  const { getRobot, portfolios, loading: dataLoading } = useData()
   const { id } = useParams()
   const navigate = useNavigate()
 
@@ -78,7 +78,7 @@ export default function RobotDetail() {
       } catch { return false }
     })
     setPortfoliosList(myPortfolios)
-    const adj = buildAdjOps(r.operations, r.desagio || 0, r.tipo || 'backtest')
+    const adj = buildAdjOps(r.operations, r.desagio || 0, r.tipo || 'backtest', r)
     setAdjOps(adj)
     const m = calcMetrics(adj, r.desagio || 0, r.tipo || 'backtest')
     // Add monthly return
@@ -99,11 +99,11 @@ export default function RobotDetail() {
     })
   }
 
-  useEffect(() => { load() }, [id])
+  useEffect(() => { if (!dataLoading) load() }, [id, dataLoading])
 
   useEffect(() => {
     if (!robot) return
-    const adj = buildAdjOps(robot.operations, desagio, tipo)
+    const adj = buildAdjOps(robot.operations, desagio, tipo, robot)
     setAdjOps(adj)
     const m = calcMetrics(adj, desagio, tipo)
     const { recoveredMaxDD, currentDD } = calcRecoveredDD(adj)
@@ -862,6 +862,16 @@ export default function RobotDetail() {
           </div>
           <div className="metrics-grid">
             <MetricCard label="Resultado total" value={fmtR(metrics.totalBruto || 0)} cls={(metrics.totalBruto || 0) >= 0 ? 'pos' : 'neg'} sub={`${metrics.nOps || 0} operações`} />
+            {(() => {
+              const custoOp = adjOps[0]?.custo || 0
+              const custoTotal = adjOps.reduce((a, o) => a + (o.custo || 0), 0)
+              return (
+                <MetricCard label="Custos operacionais" value={fmtR(-custoTotal)} cls={custoTotal > 0 ? 'neg' : undefined}
+                  sub={custoTotal > 0
+                    ? `${adjOps.length} ops × ${fmtR(custoOp)} (ida e volta) · já descontados`
+                    : 'Sem custos cadastrados'} />
+              )
+            })()}
             <MetricCard label="Capital necessário" value={fmtR(metrics.capital || 0)} sub="2× maior drawdown" />
             <MetricCard label="Rentabilidade" value={fmtPct(metrics.rentPct || 0)} cls={(metrics.rentPct || 0) >= 0 ? 'pos' : 'neg'} sub={`sobre capital · ${fmtPct(metrics.rentMensal || (metrics.rentPct || 0) / Math.max((metrics.anos || 1) * 12, 1))}/mês`} />
             <MetricCard label="Taxa de acerto" value={fmtNum(metrics.winRate || 0, 1) + '%'} cls={(metrics.winRate || 0) >= 50 ? 'pos' : 'neg'} sub={`${metrics.nWins || 0}W / ${metrics.nLosses || 0}L`} />

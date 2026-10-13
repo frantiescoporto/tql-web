@@ -167,6 +167,8 @@ html.theme-light .bib {
 .bib-pop .bib-pop-stats { display: flex; gap: 18px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--b-line); color: var(--b-mute); font-size: 12px; }
 .bib-pop .bib-pop-stats b { color: var(--b-ink); font-weight: 600; }
 
+.bib-pop .bib-pop-cost { display: block; margin-top: 8px; font-size: 12px; color: var(--b-mute); }
+
 .bib-empty { padding: 48px 0; text-align: center; color: var(--b-mute); }
 
 /* ── Plans ────────────────────────────────────────────── */

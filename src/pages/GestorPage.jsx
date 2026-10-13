@@ -67,7 +67,7 @@ export default function GestorPage({ portfolios, inline = false, inlineData = nu
         for (const s of robotsCfg) {
           const full = getRobot(s.robotId)
           if (!full?.operations?.length) continue
-          const adjOps = buildAdjOps(full.operations, full.desagio||0, full.tipo||'backtest')
+          const adjOps = buildAdjOps(full.operations, full.desagio||0, full.tipo||'backtest', full)
           entries.push({ robot: full, lots: s.lots||1, adjOps })
         }
         if (!entries.length) return

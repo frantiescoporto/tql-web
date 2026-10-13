@@ -103,7 +103,7 @@ export default function PortfolioPage({  autoConfig, autoName, readOnly }) {
       try {
         const full = getRobot(r.id)
         if (full?.operations?.length) {
-          const adjOps = buildAdjOps(full.operations, full.desagio || 0, full.tipo || 'backtest')
+          const adjOps = buildAdjOps(full.operations, full.desagio || 0, full.tipo || 'backtest', full)
           const m = calcMetrics(adjOps)
           const { recoveredMaxDD } = calcRecoveredDD(adjOps)
           metrics[r.id] = { m6015: m.m6015, recoveredMaxDD }
@@ -136,7 +136,7 @@ export default function PortfolioPage({  autoConfig, autoName, readOnly }) {
     if (robotData[robotId] && 'avgMonthlyReal' in robotData[robotId]) return
     const r = getRobot(robotId)
     if (!r) return
-    const adjOps = buildAdjOps(r.operations, r.desagio || 0, r.tipo || 'backtest')
+    const adjOps = buildAdjOps(r.operations, r.desagio || 0, r.tipo || 'backtest', r)
     // Calcular média mensal conta real
     let avgMonthlyReal = null
     if (r.realOps?.length) {

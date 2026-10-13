@@ -29,6 +29,7 @@ const PLANOS = [
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 const brl = v => (v < 0 ? '-' : '') + 'R$ ' + Math.abs(Math.round(v)).toLocaleString('pt-BR')
+const brlc = v => 'R$ ' + Number(v || 0).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 const fmtDate = iso => {
   if (!iso) return '—'
   const [y, m, d] = iso.split('-')
@@ -78,6 +79,11 @@ function InfoTip({ item }) {
           {item.since && <span>desde <b>{item.since}</b></span>}
           {item.posMonths != null && <span><b>{item.posMonths}%</b> meses positivos</span>}
         </span>
+        {item.totalCosts > 0 && (
+          <span className="bib-pop-cost">
+            Custos já descontados: {brl(item.totalCosts)} no período ({brlc(item.costPerTrade)} por operação)
+          </span>
+        )}
       </span>
     </span>
   )
@@ -125,6 +131,10 @@ export default function BibliotecaPage() {
   const nDay = items.filter(i => i.mode === 'day').length
   const nSwing = items.length - nDay
   const firstYear = combined[0]?.m.slice(0, 4)
+  const costVals = [...new Set(items.map(i => i.costPerTrade).filter(v => v > 0))]
+  const costNote = costVals.length === 1
+    ? `emolumentos e corretagem de ${brlc(costVals[0])} por operação (ida e volta), descontados em cada trade`
+    : 'emolumentos e corretagem descontados em cada trade, conforme o custo cadastrado de cada estratégia'
 
   return (
     <main className="bib">
@@ -147,7 +157,7 @@ export default function BibliotecaPage() {
               <div className="bib-curve-head">
                 <span className="bib-curve-total">{brl(combined[combined.length - 1].v)}</span>
                 <span className="bib-curve-cap">
-                  Resultado acumulado da biblioteca<br />1 contrato por estratégia, em backtest
+                  Resultado acumulado da biblioteca<br />1 contrato por estratégia, líquido de custos
                 </span>
               </div>
               <svg className="bib-curve" viewBox="0 0 600 190" preserveAspectRatio="none" role="img"
@@ -181,7 +191,7 @@ export default function BibliotecaPage() {
         <div className="bib-sec-head">
           <div>
             <h2>Estratégias</h2>
-            <p>Passe o mouse no ? para ver como cada estratégia opera. Valores com 1 contrato.</p>
+            <p>Passe o mouse no ? para ver como cada estratégia opera. Valores com 1 contrato, já descontados os custos.</p>
           </div>
           <div className="bib-controls">
             <div className="bib-seg" role="group" aria-label="Estilo">
@@ -297,9 +307,9 @@ export default function BibliotecaPage() {
       </section>
 
       <p className="bib-note">
-        Resultados obtidos em backtest com 1 contrato, sem custos operacionais. A média mensal considera todos os
-        meses do período testado. Resultados passados não garantem resultados futuros. Operar no mercado
-        financeiro envolve risco de perda.
+        Resultados de backtest com 1 contrato, líquidos de custos operacionais: {costNote}.
+        A média mensal considera todos os meses do período testado. Resultados passados não garantem
+        resultados futuros. Operar no mercado financeiro envolve risco de perda.
       </p>
     </main>
   )
