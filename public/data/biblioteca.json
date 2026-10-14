@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-13T23:16:06.492Z",
+ "generatedAt": "2026-10-14T18:24:20.087Z",
  "combined": [
   {
    "m": "2012-04",
@@ -35,667 +35,667 @@
   },
   {
    "m": "2013-01",
-   "v": 5193
+   "v": 6871
   },
   {
    "m": "2013-02",
-   "v": 4558
+   "v": 6834
   },
   {
    "m": "2013-03",
-   "v": 4530
+   "v": 5633
   },
   {
    "m": "2013-04",
-   "v": 5133
+   "v": 5788
   },
   {
    "m": "2013-05",
-   "v": 8060
+   "v": 8058
   },
   {
    "m": "2013-06",
-   "v": 11513
+   "v": 12325
   },
   {
    "m": "2013-07",
-   "v": 15459
+   "v": 18456
   },
   {
    "m": "2013-08",
-   "v": 17985
+   "v": 20649
   },
   {
    "m": "2013-09",
-   "v": 21262
+   "v": 24606
   },
   {
    "m": "2013-10",
-   "v": 22133
+   "v": 23067
   },
   {
    "m": "2013-11",
-   "v": 24797
+   "v": 26278
   },
   {
    "m": "2013-12",
-   "v": 29090
+   "v": 30365
   },
   {
    "m": "2014-01",
-   "v": 29213
+   "v": 30595
   },
   {
    "m": "2014-02",
-   "v": 27827
+   "v": 26103
   },
   {
    "m": "2014-03",
-   "v": 32937
+   "v": 34637
   },
   {
    "m": "2014-04",
-   "v": 34014
+   "v": 36066
   },
   {
    "m": "2014-05",
-   "v": 36111
+   "v": 37873
   },
   {
    "m": "2014-06",
-   "v": 37772
+   "v": 39660
   },
   {
    "m": "2014-07",
-   "v": 38375
+   "v": 40802
   },
   {
    "m": "2014-08",
-   "v": 44466
+   "v": 52750
   },
   {
    "m": "2014-09",
-   "v": 43739
+   "v": 51651
   },
   {
    "m": "2014-10",
-   "v": 49695
+   "v": 61981
   },
   {
    "m": "2014-11",
-   "v": 52661
+   "v": 64591
   },
   {
    "m": "2014-12",
-   "v": 54776
+   "v": 66963
   },
   {
    "m": "2015-01",
-   "v": 57294
+   "v": 70300
   },
   {
    "m": "2015-02",
-   "v": 58708
+   "v": 70574
   },
   {
    "m": "2015-03",
-   "v": 61288
+   "v": 76048
   },
   {
    "m": "2015-04",
-   "v": 62438
-  },
-  {
-   "m": "2015-05",
-   "v": 65672
-  },
-  {
-   "m": "2015-06",
-   "v": 65217
-  },
-  {
-   "m": "2015-07",
-   "v": 65782
-  },
-  {
-   "m": "2015-08",
-   "v": 68192
-  },
-  {
-   "m": "2015-09",
-   "v": 72637
-  },
-  {
-   "m": "2015-10",
-   "v": 73672
-  },
-  {
-   "m": "2015-11",
-   "v": 73556
-  },
-  {
-   "m": "2015-12",
-   "v": 73663
-  },
-  {
-   "m": "2016-01",
    "v": 78231
   },
   {
+   "m": "2015-05",
+   "v": 80912
+  },
+  {
+   "m": "2015-06",
+   "v": 79905
+  },
+  {
+   "m": "2015-07",
+   "v": 81782
+  },
+  {
+   "m": "2015-08",
+   "v": 86428
+  },
+  {
+   "m": "2015-09",
+   "v": 91832
+  },
+  {
+   "m": "2015-10",
+   "v": 92179
+  },
+  {
+   "m": "2015-11",
+   "v": 91595
+  },
+  {
+   "m": "2015-12",
+   "v": 92463
+  },
+  {
+   "m": "2016-01",
+   "v": 97738
+  },
+  {
    "m": "2016-02",
-   "v": 81055
+   "v": 102496
   },
   {
    "m": "2016-03",
-   "v": 84329
+   "v": 108194
   },
   {
    "m": "2016-04",
-   "v": 88243
+   "v": 111620
   },
   {
    "m": "2016-05",
-   "v": 94139
+   "v": 119250
   },
   {
    "m": "2016-06",
-   "v": 95469
+   "v": 120550
   },
   {
    "m": "2016-07",
-   "v": 99651
+   "v": 128378
   },
   {
    "m": "2016-08",
-   "v": 102090
+   "v": 130459
   },
   {
    "m": "2016-09",
-   "v": 102714
+   "v": 129504
   },
   {
    "m": "2016-10",
-   "v": 107458
+   "v": 141848
   },
   {
    "m": "2016-11",
-   "v": 111923
+   "v": 144230
   },
   {
    "m": "2016-12",
-   "v": 114037
+   "v": 145602
   },
   {
    "m": "2017-01",
-   "v": 118391
+   "v": 150687
   },
   {
    "m": "2017-02",
-   "v": 117043
+   "v": 150810
   },
   {
    "m": "2017-03",
-   "v": 119981
+   "v": 153710
   },
   {
    "m": "2017-04",
-   "v": 120199
+   "v": 153079
   },
   {
    "m": "2017-05",
-   "v": 121896
+   "v": 149143
   },
   {
    "m": "2017-06",
-   "v": 123515
+   "v": 151675
   },
   {
    "m": "2017-07",
-   "v": 124965
+   "v": 157471
   },
   {
    "m": "2017-08",
-   "v": 128568
+   "v": 161515
   },
   {
    "m": "2017-09",
-   "v": 129133
+   "v": 161738
   },
   {
    "m": "2017-10",
-   "v": 133608
+   "v": 165409
   },
   {
    "m": "2017-11",
-   "v": 133966
+   "v": 165421
   },
   {
    "m": "2017-12",
-   "v": 138022
+   "v": 171134
   },
   {
    "m": "2018-01",
-   "v": 145351
+   "v": 182123
   },
   {
    "m": "2018-02",
-   "v": 150243
+   "v": 183846
   },
   {
    "m": "2018-03",
-   "v": 154305
+   "v": 187532
   },
   {
    "m": "2018-04",
-   "v": 158946
+   "v": 190561
   },
   {
    "m": "2018-05",
-   "v": 171663
+   "v": 206059
   },
   {
    "m": "2018-06",
-   "v": 174403
+   "v": 209223
   },
   {
    "m": "2018-07",
-   "v": 181865
+   "v": 220071
   },
   {
    "m": "2018-08",
-   "v": 189497
+   "v": 227764
   },
   {
    "m": "2018-09",
-   "v": 194494
+   "v": 230191
   },
   {
    "m": "2018-10",
-   "v": 199883
+   "v": 238481
   },
   {
    "m": "2018-11",
-   "v": 206371
+   "v": 243803
   },
   {
    "m": "2018-12",
-   "v": 207926
+   "v": 242064
   },
   {
    "m": "2019-01",
-   "v": 218667
+   "v": 258280
   },
   {
    "m": "2019-02",
-   "v": 221894
+   "v": 262236
   },
   {
    "m": "2019-03",
-   "v": 230952
+   "v": 273686
   },
   {
    "m": "2019-04",
-   "v": 236723
+   "v": 280209
   },
   {
    "m": "2019-05",
-   "v": 245855
+   "v": 292583
   },
   {
    "m": "2019-06",
-   "v": 249123
+   "v": 299042
   },
   {
    "m": "2019-07",
-   "v": 252185
+   "v": 303580
   },
   {
    "m": "2019-08",
-   "v": 262240
+   "v": 317839
   },
   {
    "m": "2019-09",
-   "v": 262765
+   "v": 320755
   },
   {
    "m": "2019-10",
-   "v": 265740
+   "v": 327960
   },
   {
    "m": "2019-11",
-   "v": 268966
+   "v": 330740
   },
   {
    "m": "2019-12",
-   "v": 281990
+   "v": 355237
   },
   {
    "m": "2020-01",
-   "v": 285395
+   "v": 357425
   },
   {
    "m": "2020-02",
-   "v": 296008
+   "v": 368709
   },
   {
    "m": "2020-03",
-   "v": 380901
+   "v": 475964
   },
   {
    "m": "2020-04",
-   "v": 401353
+   "v": 498896
   },
   {
    "m": "2020-05",
-   "v": 407882
+   "v": 510670
   },
   {
    "m": "2020-06",
-   "v": 424206
+   "v": 535032
   },
   {
    "m": "2020-07",
-   "v": 429618
+   "v": 540272
   },
   {
    "m": "2020-08",
-   "v": 438128
+   "v": 547903
   },
   {
    "m": "2020-09",
-   "v": 440604
+   "v": 552111
   },
   {
    "m": "2020-10",
-   "v": 449383
+   "v": 562607
   },
   {
    "m": "2020-11",
-   "v": 458105
+   "v": 576299
   },
   {
    "m": "2020-12",
-   "v": 465563
+   "v": 588535
   },
   {
    "m": "2021-01",
-   "v": 480935
+   "v": 609047
   },
   {
    "m": "2021-02",
-   "v": 484286
+   "v": 615840
   },
   {
    "m": "2021-03",
-   "v": 501861
+   "v": 638668
   },
   {
    "m": "2021-04",
-   "v": 505432
+   "v": 644124
   },
   {
    "m": "2021-05",
-   "v": 515528
+   "v": 661823
   },
   {
    "m": "2021-06",
-   "v": 519996
+   "v": 667791
   },
   {
    "m": "2021-07",
-   "v": 526853
+   "v": 676584
   },
   {
    "m": "2021-08",
-   "v": 537988
+   "v": 689590
   },
   {
    "m": "2021-09",
-   "v": 552269
+   "v": 708495
   },
   {
    "m": "2021-10",
-   "v": 563461
+   "v": 726925
   },
   {
    "m": "2021-11",
-   "v": 574589
+   "v": 737961
   },
   {
    "m": "2021-12",
-   "v": 585389
+   "v": 749285
   },
   {
    "m": "2022-01",
-   "v": 596947
+   "v": 764935
   },
   {
    "m": "2022-02",
-   "v": 604011
+   "v": 772533
   },
   {
    "m": "2022-03",
-   "v": 614469
+   "v": 788122
   },
   {
    "m": "2022-04",
-   "v": 623159
+   "v": 800792
   },
   {
    "m": "2022-05",
-   "v": 640023
+   "v": 817937
   },
   {
    "m": "2022-06",
-   "v": 650871
+   "v": 831078
   },
   {
    "m": "2022-07",
-   "v": 656560
+   "v": 840269
   },
   {
    "m": "2022-08",
-   "v": 669871
+   "v": 863358
   },
   {
    "m": "2022-09",
-   "v": 682450
+   "v": 880453
   },
   {
    "m": "2022-10",
-   "v": 699105
+   "v": 900654
   },
   {
    "m": "2022-11",
-   "v": 721626
+   "v": 926211
   },
   {
    "m": "2022-12",
-   "v": 738692
+   "v": 945270
   },
   {
    "m": "2023-01",
-   "v": 744676
+   "v": 951887
   },
   {
    "m": "2023-02",
-   "v": 753644
+   "v": 961483
   },
   {
    "m": "2023-03",
-   "v": 765843
+   "v": 976957
   },
   {
    "m": "2023-04",
-   "v": 778846
+   "v": 994825
   },
   {
    "m": "2023-05",
-   "v": 789325
+   "v": 1013432
   },
   {
    "m": "2023-06",
-   "v": 797989
+   "v": 1034561
   },
   {
    "m": "2023-07",
-   "v": 808016
+   "v": 1043319
   },
   {
    "m": "2023-08",
-   "v": 819450
+   "v": 1055716
   },
   {
    "m": "2023-09",
-   "v": 823846
+   "v": 1061386
   },
   {
    "m": "2023-10",
-   "v": 826651
+   "v": 1065086
   },
   {
    "m": "2023-11",
-   "v": 841484
+   "v": 1086728
   },
   {
    "m": "2023-12",
-   "v": 846382
+   "v": 1093010
   },
   {
    "m": "2024-01",
-   "v": 849621
+   "v": 1096863
   },
   {
    "m": "2024-02",
-   "v": 863502
+   "v": 1111076
   },
   {
    "m": "2024-03",
-   "v": 869283
+   "v": 1116493
   },
   {
    "m": "2024-04",
-   "v": 877060
+   "v": 1125627
   },
   {
    "m": "2024-05",
-   "v": 885880
+   "v": 1137592
   },
   {
    "m": "2024-06",
-   "v": 894776
+   "v": 1149070
   },
   {
    "m": "2024-07",
-   "v": 896382
+   "v": 1148370
   },
   {
    "m": "2024-08",
-   "v": 907654
+   "v": 1169606
   },
   {
    "m": "2024-09",
-   "v": 914834
+   "v": 1176440
   },
   {
    "m": "2024-10",
-   "v": 916664
+   "v": 1178649
   },
   {
    "m": "2024-11",
-   "v": 920581
+   "v": 1181245
   },
   {
    "m": "2024-12",
-   "v": 927110
+   "v": 1188963
   },
   {
    "m": "2025-01",
-   "v": 936343
+   "v": 1199491
   },
   {
    "m": "2025-02",
-   "v": 944718
+   "v": 1214616
   },
   {
    "m": "2025-03",
-   "v": 951559
+   "v": 1224462
   },
   {
    "m": "2025-04",
-   "v": 964803
+   "v": 1243984
   },
   {
    "m": "2025-05",
-   "v": 977114
+   "v": 1257907
   },
   {
    "m": "2025-06",
-   "v": 988360
+   "v": 1272079
   },
   {
    "m": "2025-07",
-   "v": 1000611
+   "v": 1287967
   },
   {
    "m": "2025-08",
-   "v": 1015289
+   "v": 1306107
   },
   {
    "m": "2025-09",
-   "v": 1026140
+   "v": 1320864
   },
   {
    "m": "2025-10",
-   "v": 1034636
+   "v": 1339036
   },
   {
    "m": "2025-11",
-   "v": 1046804
+   "v": 1360459
   },
   {
    "m": "2025-12",
-   "v": 1057464
+   "v": 1374475
   },
   {
    "m": "2026-01",
-   "v": 1091372
+   "v": 1423209
   },
   {
    "m": "2026-02",
-   "v": 1108245
+   "v": 1446037
   },
   {
    "m": "2026-03",
-   "v": 1144302
+   "v": 1493043
   },
   {
    "m": "2026-04",
-   "v": 1162579
+   "v": 1523528
   },
   {
    "m": "2026-05",
-   "v": 1188414
+   "v": 1554971
   },
   {
    "m": "2026-06",
-   "v": 1202617
+   "v": 1566588
   },
   {
    "m": "2026-07",
-   "v": 1212486
+   "v": 1576843
   },
   {
    "m": "2026-08",
-   "v": 1226465
+   "v": 1595108
   },
   {
    "m": "2026-09",
-   "v": 1257564
+   "v": 1624927
   },
   {
    "m": "2026-10",
-   "v": 1278568
+   "v": 1655853
   }
  ],
  "items": [
@@ -5584,6 +5584,817 @@
    ]
   },
   {
+   "id": 281,
+   "name": "TQL_276",
+   "createdAt": "2026-10-11",
+   "ativo": "WIN",
+   "timeframe": "Diário",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "both",
+   "desc": [
+    "Gatilho: OBV faz nova máxima de N barras (Granville)",
+    "Filtro: Excluir dia da semana",
+    "Stop: k × ATR · Alvo: k × ATR"
+   ],
+   "studioName": "276_TQS_TEN_OBVBREAK_DIARIO_21",
+   "nOps": 381,
+   "costPerTrade": 0.5,
+   "totalCosts": 191,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 89.5,
+   "avgMonthly": 168,
+   "posMonths": 72,
+   "curve": [
+    90,
+    -504,
+    518,
+    675,
+    -471,
+    -247,
+    -1799,
+    -2817,
+    -3530,
+    -3000,
+    -2002,
+    -1129,
+    75,
+    -474,
+    412,
+    1596,
+    806,
+    203,
+    518,
+    405,
+    -551,
+    -1566,
+    -1353,
+    91,
+    2307,
+    3271,
+    3435,
+    5302,
+    7273,
+    8833,
+    10246,
+    12258,
+    14043,
+    14500,
+    14731,
+    16418,
+    18155,
+    19550,
+    20861,
+    22187,
+    20881,
+    19644,
+    21484,
+    23086,
+    23398,
+    26056,
+    29520,
+    29832,
+    27694
+   ]
+  },
+  {
+   "id": 279,
+   "name": "TQL_277",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "Renko 21R",
+   "mode": "day",
+   "motor": "Tendência",
+   "dir": "long",
+   "desc": [
+    "Filtro: Daily Factor (corpo de ontem < K do range)",
+    "Filtro: Range de ontem não extremo",
+    "Stop: k × ATR · Alvo: Pontos fixos",
+    "Trailing: Trailing na mín/máx dos últimos N candles · atualiza no fechamento do candle",
+    "Janelas: 10h00 às 11h00 e 15h00 às 17h00 · zeragem 17h40"
+   ],
+   "studioName": "277_TQS_TEN_TRIPLEMA_21R_23",
+   "nOps": 1293,
+   "costPerTrade": 0.5,
+   "totalCosts": 647,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 61,
+   "avgMonthly": 91,
+   "posMonths": 59,
+   "curve": [
+    32,
+    -1,
+    1413,
+    1409,
+    2025,
+    2391,
+    3040,
+    3553,
+    3981,
+    3789,
+    4215,
+    4490,
+    5201,
+    5155,
+    5410,
+    5652,
+    5669,
+    5890,
+    5954,
+    7106,
+    7604,
+    7825,
+    7809,
+    8387,
+    8672,
+    8567,
+    8634,
+    9237,
+    9600,
+    9801,
+    9823,
+    10173,
+    10202,
+    10519,
+    11120,
+    11445,
+    11731,
+    11612,
+    12515,
+    12571,
+    13346,
+    13301,
+    14028,
+    13928,
+    14022,
+    13764,
+    14116,
+    14614,
+    15031
+   ]
+  },
+  {
+   "id": 278,
+   "name": "TQL_278",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "Renko 40R",
+   "mode": "day",
+   "motor": "Tendência",
+   "dir": "both",
+   "desc": [
+    "Gatilho: MACD cruza a linha de sinal. Appel",
+    "Stop: Pontos fixos · Alvo: k × ATR",
+    "Trailing: Trailing na mín/máx dos últimos N candles · atualiza no fechamento do candle",
+    "Janelas: 10h30 às 12h30 · zeragem 17h30"
+   ],
+   "studioName": "278_TQS_TEN_MACDCROSS_40R_47",
+   "nOps": 1500,
+   "costPerTrade": 0.5,
+   "totalCosts": 750,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 69.3,
+   "avgMonthly": 197,
+   "posMonths": 79,
+   "curve": [
+    -20,
+    1383,
+    1842,
+    2983,
+    3305,
+    4706,
+    5515,
+    6424,
+    7317,
+    7888,
+    9057,
+    9348,
+    10231,
+    10617,
+    11300,
+    11820,
+    13203,
+    13923,
+    14505,
+    15294,
+    15631,
+    15924,
+    16670,
+    17505,
+    18310,
+    19177,
+    20887,
+    21290,
+    22115,
+    23127,
+    23935,
+    24888,
+    25262,
+    25404,
+    25797,
+    26540,
+    26891,
+    27640,
+    28447,
+    29220,
+    29552,
+    29358,
+    29860,
+    30185,
+    30542,
+    30602,
+    31398,
+    32339
+   ]
+  },
+  {
+   "id": 277,
+   "name": "TQL_279",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "Renko 31R",
+   "mode": "day",
+   "motor": "Tendência",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Cruzamento de médias exponenciais. clássico",
+    "Stop: Pontos fixos · Alvo: k × range do candle de sinal",
+    "Janelas: 9h05 às 12h05 · zeragem 17h40"
+   ],
+   "studioName": "279_TQS_TEN_MACROSS_31R_30",
+   "nOps": 781,
+   "costPerTrade": 0.5,
+   "totalCosts": 391,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 69.1,
+   "avgMonthly": 61,
+   "posMonths": 60,
+   "curve": [
+    98,
+    199,
+    169,
+    68,
+    438,
+    950,
+    1401,
+    1636,
+    2006,
+    2269,
+    2558,
+    2737,
+    2899,
+    3017,
+    2921,
+    3237,
+    3384,
+    3670,
+    3553,
+    3689,
+    4018,
+    4658,
+    4767,
+    4932,
+    5148,
+    5339,
+    5832,
+    6302,
+    6164,
+    6164,
+    6299,
+    7009,
+    7073,
+    7370,
+    7699,
+    7720,
+    8229,
+    8289,
+    8527,
+    8451,
+    8924,
+    9279,
+    9505,
+    9552,
+    9613,
+    9739,
+    10079
+   ]
+  },
+  {
+   "id": 275,
+   "name": "TQL_280",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "long",
+   "desc": [
+    "Gatilho: Preço cruza a KAMA (média adaptativa)",
+    "Filtro: A favor da abertura do dia",
+    "Stop: k × ATR · Alvo: k × ATR",
+    "Trailing: Trailing em pontos (máx/mín desde a entrada − P) · liga desde a entrada · atualiza no fechamento do candle"
+   ],
+   "studioName": "280_TQS_TEN_KAMACROSS_240M_27",
+   "nOps": 290,
+   "costPerTrade": 0.5,
+   "totalCosts": 145,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 45.2,
+   "avgMonthly": 78,
+   "posMonths": 47,
+   "curve": [
+    -45,
+    -302,
+    -179,
+    -218,
+    -366,
+    -333,
+    910,
+    1390,
+    1624,
+    1550,
+    2245,
+    2251,
+    2095,
+    1854,
+    2625,
+    3080,
+    3017,
+    4356,
+    3944,
+    5084,
+    5185,
+    4677,
+    5159,
+    5107,
+    5304,
+    5278,
+    4918,
+    4898,
+    5062,
+    5576,
+    5894,
+    7389,
+    7555,
+    7532,
+    8241,
+    8049,
+    8219,
+    8460,
+    8922,
+    9636,
+    10796,
+    12923,
+    13021
+   ]
+  },
+  {
+   "id": 274,
+   "name": "TQL_281",
+   "createdAt": "2026-10-11",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Pullback",
+   "dir": "both",
+   "desc": [
+    "Gatilho: N fechamentos contra a tendência",
+    "Stop: Extremo oposto do candle de sinal · Alvo: k × range do candle de sinal",
+    "Trailing: Trailing na mín/máx dos últimos N candles · liga desde a entrada · atualiza no fechamento do candle"
+   ],
+   "studioName": "281_TQS_PUL_PULLBACKBARS_240M_16",
+   "nOps": 263,
+   "costPerTrade": 0.5,
+   "totalCosts": 132,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 46,
+   "avgMonthly": 52,
+   "posMonths": 43,
+   "curve": [
+    -115,
+    -219,
+    -259,
+    -260,
+    -47,
+    -234,
+    -487,
+    -500,
+    -619,
+    -607,
+    -152,
+    238,
+    144,
+    398,
+    365,
+    225,
+    97,
+    447,
+    67,
+    75,
+    58,
+    84,
+    270,
+    358,
+    275,
+    41,
+    783,
+    756,
+    717,
+    1740,
+    2237,
+    2017,
+    2628,
+    2836,
+    2777,
+    3528,
+    3551,
+    3909,
+    4297,
+    4019,
+    4926,
+    6555,
+    7385,
+    9007,
+    8550
+   ]
+  },
+  {
+   "id": 273,
+   "name": "TQL_282",
+   "createdAt": "2026-10-11",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Pullback",
+   "dir": "both",
+   "desc": [
+    "Gatilho: N fechamentos contra a tendência",
+    "Stop: Extremo oposto do candle de sinal · Alvo: k × ATR"
+   ],
+   "studioName": "282_TQS_PUL_PULLBACKBARS_240M_12",
+   "nOps": 261,
+   "costPerTrade": 0.5,
+   "totalCosts": 131,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 47.9,
+   "avgMonthly": 50,
+   "posMonths": 44,
+   "curve": [
+    -115,
+    -78,
+    -57,
+    -148,
+    36,
+    -115,
+    -7,
+    -86,
+    -18,
+    239,
+    586,
+    754,
+    731,
+    678,
+    558,
+    612,
+    911,
+    758,
+    644,
+    745,
+    739,
+    479,
+    810,
+    401,
+    783,
+    962,
+    961,
+    1273,
+    1203,
+    1736,
+    2158,
+    2226,
+    2840,
+    2873,
+    3529,
+    4068,
+    4038,
+    4145,
+    4227,
+    4470,
+    5197,
+    5812,
+    7795,
+    8597,
+    8266
+   ]
+  },
+  {
+   "id": 270,
+   "name": "TQL_283",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "long",
+   "desc": [
+    "Gatilho: OBV faz nova máxima de N barras (Granville)",
+    "Filtro: Efficiency Ratio alto (movimento limpo)",
+    "Stop: Pontos fixos · sem alvo fixo",
+    "Trailing: Trailing na mín/máx dos últimos N candles · atualiza no fechamento do candle"
+   ],
+   "studioName": "283_TQS_TEN_OBVBREAK_240M_211",
+   "nOps": 266,
+   "costPerTrade": 0.5,
+   "totalCosts": 133,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 29.3,
+   "avgMonthly": 53,
+   "posMonths": 23,
+   "curve": [
+    1,
+    -250,
+    -272,
+    -82,
+    -325,
+    -149,
+    -269,
+    -571,
+    315,
+    174,
+    254,
+    108,
+    -129,
+    654,
+    560,
+    596,
+    995,
+    895,
+    709,
+    614,
+    910,
+    1281,
+    1919,
+    2360,
+    2014,
+    2623,
+    2380,
+    2208,
+    2052,
+    1844,
+    3569,
+    4042,
+    3840,
+    3869,
+    3979,
+    3664,
+    3438,
+    6197,
+    5882,
+    5815,
+    5613,
+    7154,
+    6857,
+    8874,
+    8697,
+    8656
+   ]
+  },
+  {
+   "id": 269,
+   "name": "TQL_284",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "Renko 21R",
+   "mode": "day",
+   "motor": "Tendência",
+   "dir": "long",
+   "desc": [
+    "Filtro: Daily Factor (corpo de ontem < K do range)",
+    "Stop: k × ATR · Alvo: Pontos fixos",
+    "Trailing: Trailing na mín/máx dos últimos N candles · atualiza no fechamento do candle",
+    "Janelas: 9h30 às 10h30 e 14h00 às 16h00 · zeragem 17h40"
+   ],
+   "studioName": "284_TQS_TEN_TRIPLEMA_21R_22",
+   "nOps": 1210,
+   "costPerTrade": 0.5,
+   "totalCosts": 605,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 64.4,
+   "avgMonthly": 90,
+   "posMonths": 66,
+   "curve": [
+    220,
+    462,
+    842,
+    1558,
+    1924,
+    2066,
+    2588,
+    2784,
+    3212,
+    3389,
+    3581,
+    4440,
+    4876,
+    4877,
+    5004,
+    5419,
+    5443,
+    5398,
+    5693,
+    6663,
+    7175,
+    7049,
+    7583,
+    7513,
+    7819,
+    8145,
+    8570,
+    8744,
+    9265,
+    9534,
+    9768,
+    9790,
+    10303,
+    10756,
+    11155,
+    11707,
+    12054,
+    12473,
+    12352,
+    12942,
+    13024,
+    13342,
+    13332,
+    13528,
+    13735,
+    14377,
+    14793,
+    14895
+   ]
+  },
+  {
+   "id": 268,
+   "name": "TQL_285",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "Renko 21R",
+   "mode": "day",
+   "motor": "Reversão",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Fora das bandas STARC (média ± k·ATR). Stoller / Murphy apêndice A",
+    "Filtro: Excluir dia da semana",
+    "Stop: Extremo oposto do candle de sinal · sem alvo fixo",
+    "Trailing: Trailing na mín/máx dos últimos N candles · atualiza no fechamento do candle",
+    "Janelas: 11h30 às 13h00 e 15h00 às 16h00 · zeragem 17h40"
+   ],
+   "studioName": "285_TQS_REV_STARCFADE_21R_24",
+   "nOps": 1249,
+   "costPerTrade": 0.5,
+   "totalCosts": 625,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 52.6,
+   "avgMonthly": 70,
+   "posMonths": 46,
+   "curve": [
+    58,
+    691,
+    1187,
+    1208,
+    817,
+    -424,
+    -361,
+    -844,
+    -1151,
+    -1316,
+    -1608,
+    -1470,
+    -578,
+    382,
+    1081,
+    1103,
+    1161,
+    1775,
+    2533,
+    2242,
+    2043,
+    2251,
+    2910,
+    3350,
+    3490,
+    4254,
+    4455,
+    4804,
+    4921,
+    5022,
+    5297,
+    5322,
+    5629,
+    5729,
+    6232,
+    6764,
+    7892,
+    8391,
+    8293,
+    8646,
+    9155,
+    9385,
+    9737,
+    9801,
+    10694,
+    11316,
+    11502,
+    11693
+   ]
+  },
+  {
+   "id": 267,
+   "name": "TQL_286",
+   "createdAt": "2026-10-11",
+   "ativo": "WIN",
+   "timeframe": "Diário",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "long",
+   "desc": [
+    "Gatilho: OBV faz nova máxima de N barras (Granville)",
+    "Filtro: Amplitude diária % fora de extremos",
+    "Filtro: SAR Parabólico a favor",
+    "Stop: Pontos fixos · sem alvo fixo"
+   ],
+   "studioName": "286_TQS_TEN_OBVBREAK_DIARIO_23",
+   "nOps": 240,
+   "costPerTrade": 0.5,
+   "totalCosts": 120,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 6.7,
+   "avgMonthly": 54,
+   "posMonths": 10,
+   "curve": [
+    -30,
+    -183,
+    -335,
+    -488,
+    164,
+    11,
+    -141,
+    -294,
+    -446,
+    -599,
+    -751,
+    -615,
+    131,
+    -22,
+    738,
+    1276,
+    1124,
+    971,
+    819,
+    666,
+    927,
+    774,
+    622,
+    1507,
+    2904,
+    2751,
+    2599,
+    2446,
+    3571,
+    3418,
+    3266,
+    4542,
+    3920,
+    5514,
+    5362,
+    5209,
+    5057,
+    4904,
+    4746,
+    4593,
+    4441,
+    4288,
+    4933,
+    4780,
+    4628,
+    5976,
+    5824,
+    8738,
+    8780
+   ]
+  },
+  {
    "id": 266,
    "name": "TQL_287",
    "createdAt": "2026-10-11",
@@ -5658,6 +6469,1565 @@
     5072,
     5091,
     5161
+   ]
+  },
+  {
+   "id": 265,
+   "name": "TQL_288",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "Renko 21R",
+   "mode": "day",
+   "motor": "Momentum",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Barra larga fechando na ponta (continuação)",
+    "Stop: k × ATR · Alvo: Pontos fixos",
+    "Trailing: Trailing k × ATR (máx/mín desde a entrada − k·ATR) · atualiza no fechamento do candle",
+    "Janelas: 9h15 às 11h15 e 14h30 às 17h30 · zeragem 17h40"
+   ],
+   "studioName": "288_TQS_MOM_BIGBARCONT_21R_25",
+   "nOps": 755,
+   "costPerTrade": 0.5,
+   "totalCosts": 378,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 39.6,
+   "avgMonthly": 53,
+   "posMonths": 34,
+   "curve": [
+    44,
+    1381,
+    1307,
+    1358,
+    1511,
+    1467,
+    1348,
+    1377,
+    1596,
+    1767,
+    2382,
+    2454,
+    2772,
+    2710,
+    2855,
+    3189,
+    3362,
+    3831,
+    4101,
+    4423,
+    4691,
+    4734,
+    4637,
+    5013,
+    4963,
+    4971,
+    5311,
+    5115,
+    5282,
+    5276,
+    5493,
+    5779,
+    5552,
+    5657,
+    5903,
+    6110,
+    6580,
+    6814,
+    6907,
+    7159,
+    7461,
+    7556,
+    7517,
+    7766,
+    7749,
+    8294,
+    8744,
+    8877,
+    8833
+   ]
+  },
+  {
+   "id": 264,
+   "name": "TQL_289",
+   "createdAt": "2026-10-11",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Ordem stop na máx/mín de ontem. rompimento da máx/mín de ontem. teste de estímulo / motor-base",
+    "Filtro: Acima/abaixo do pivot do dia anterior",
+    "Filtro: TRIX a favor (acima/abaixo de zero)",
+    "Stop: k × ATR · Alvo: Pontos fixos",
+    "Trailing: Trailing em pontos (máx/mín desde a entrada − P) · atualiza no fechamento do candle"
+   ],
+   "studioName": "289_TQS_TEN_UPREVDAY_240M_11",
+   "nOps": 519,
+   "costPerTrade": 0.5,
+   "totalCosts": 260,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 90.8,
+   "avgMonthly": 79,
+   "posMonths": 73,
+   "curve": [
+    70,
+    834,
+    1284,
+    2048,
+    2066,
+    2046,
+    1959,
+    2011,
+    2238,
+    2627,
+    2622,
+    2681,
+    2858,
+    2567,
+    2844,
+    2699,
+    3464,
+    3054,
+    1714,
+    1995,
+    2956,
+    3345,
+    4152,
+    4356,
+    5183,
+    6397,
+    7691,
+    8455,
+    9220,
+    9453,
+    9516,
+    10280,
+    11098,
+    11862,
+    12677,
+    13441,
+    12177,
+    11797,
+    12215,
+    11693,
+    10795,
+    11559,
+    12090,
+    12256,
+    13141,
+    13905,
+    13964,
+    13000,
+    13070
+   ]
+  },
+  {
+   "id": 261,
+   "name": "TQL_290",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "both",
+   "desc": [
+    "Gatilho: OBV faz nova máxima de N barras (Granville)",
+    "Filtro: Lado da VWAP a favor",
+    "Filtro: Dia anterior a favor",
+    "Filtro: Preço a favor da média longa",
+    "Stop: Pontos fixos · Alvo: k × range do candle de sinal"
+   ],
+   "studioName": "290_TQS_TEN_OBVBREAK_240M_29",
+   "nOps": 313,
+   "costPerTrade": 0.5,
+   "totalCosts": 157,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 39,
+   "avgMonthly": 21,
+   "posMonths": 31,
+   "curve": [
+    1,
+    -342,
+    -126,
+    -509,
+    -514,
+    -866,
+    -1217,
+    -1003,
+    -1349,
+    -1273,
+    -1482,
+    -1725,
+    -1720,
+    -2145,
+    -2203,
+    -2342,
+    -1881,
+    -2233,
+    -2769,
+    -3146,
+    -3327,
+    -3701,
+    -2717,
+    -1943,
+    -2365,
+    -2646,
+    -2132,
+    -2065,
+    -801,
+    -386,
+    -152,
+    714,
+    378,
+    26,
+    1683,
+    1805,
+    1373,
+    1813,
+    2686,
+    2405,
+    2042,
+    1668,
+    2525,
+    4757,
+    3614,
+    3403
+   ]
+  },
+  {
+   "id": 260,
+   "name": "TQL_291",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "30 min",
+   "mode": "swing",
+   "motor": "Pullback",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Bollinger %b baixo dentro da tendência",
+    "Stop: k × ATR · Alvo: k × ATR",
+    "Trailing: Trailing k × ATR (máx/mín desde a entrada − k·ATR) · atualiza no fechamento do candle"
+   ],
+   "studioName": "291_TQS_PUL_PCTBTREND_30M_00",
+   "nOps": 1016,
+   "costPerTrade": 0.5,
+   "totalCosts": 508,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 86.1,
+   "avgMonthly": 50,
+   "posMonths": 59,
+   "curve": [
+    21,
+    266,
+    355,
+    243,
+    197,
+    665,
+    335,
+    -322,
+    -48,
+    -396,
+    -948,
+    -1551,
+    -1625,
+    -1660,
+    -1803,
+    -1346,
+    -1259,
+    -1269,
+    -1853,
+    -1790,
+    -2258,
+    -2111,
+    -1878,
+    -959,
+    -614,
+    62,
+    773,
+    922,
+    2057,
+    3145,
+    3401,
+    3430,
+    3622,
+    3202,
+    3260,
+    4174,
+    4032,
+    4463,
+    4724,
+    4741,
+    4643,
+    5742,
+    6161,
+    6692,
+    7253,
+    7883,
+    8421,
+    8247
+   ]
+  },
+  {
+   "id": 259,
+   "name": "TQL_292",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "30 min",
+   "mode": "swing",
+   "motor": "Pullback",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Bollinger %b baixo dentro da tendência",
+    "Stop: k × ATR · Alvo: k × ATR",
+    "Trailing: Trailing k × ATR (máx/mín desde a entrada − k·ATR) · atualiza no fechamento do candle"
+   ],
+   "studioName": "292_QS_PUL_PCTBTREND_30M_01",
+   "nOps": 1016,
+   "costPerTrade": 0.5,
+   "totalCosts": 508,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 86.1,
+   "avgMonthly": 50,
+   "posMonths": 59,
+   "curve": [
+    21,
+    266,
+    355,
+    243,
+    197,
+    665,
+    335,
+    -322,
+    -48,
+    -396,
+    -948,
+    -1551,
+    -1625,
+    -1660,
+    -1803,
+    -1346,
+    -1259,
+    -1269,
+    -1853,
+    -1790,
+    -2258,
+    -2111,
+    -1878,
+    -959,
+    -614,
+    62,
+    773,
+    922,
+    2057,
+    3145,
+    3401,
+    3430,
+    3622,
+    3202,
+    3260,
+    4174,
+    4032,
+    4463,
+    4724,
+    4741,
+    4643,
+    5742,
+    6161,
+    6692,
+    7253,
+    7883,
+    8421,
+    8247
+   ]
+  },
+  {
+   "id": 258,
+   "name": "TQL_293",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "60 min",
+   "mode": "swing",
+   "motor": "Pullback",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Bollinger %b baixo dentro da tendência",
+    "Filtro: Volatilidade comprimida (largura Bollinger < média)",
+    "Stop: Extremo oposto do candle de sinal · Alvo: k × ATR",
+    "Trailing: Trailing k × ATR (máx/mín desde a entrada − k·ATR) · atualiza no fechamento do candle"
+   ],
+   "studioName": "293_TQS_PUL_PCTBTREND_60M_10",
+   "nOps": 645,
+   "costPerTrade": 0.5,
+   "totalCosts": 323,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 50.1,
+   "avgMonthly": 79,
+   "posMonths": 52,
+   "curve": [
+    -18,
+    -107,
+    188,
+    310,
+    441,
+    412,
+    622,
+    1415,
+    2180,
+    2440,
+    2265,
+    2239,
+    2450,
+    2570,
+    3303,
+    3835,
+    3672,
+    3432,
+    3024,
+    2856,
+    2482,
+    2153,
+    1921,
+    2052,
+    2603,
+    4747,
+    4739,
+    5480,
+    6265,
+    6568,
+    6848,
+    7161,
+    6638,
+    8066,
+    8345,
+    8504,
+    8680,
+    8047,
+    8732,
+    9250,
+    10163,
+    10399,
+    10465,
+    12486,
+    12502,
+    13725,
+    13193
+   ]
+  },
+  {
+   "id": 257,
+   "name": "TQL_294",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "Diário",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Números redondos (stop no múltiplo de S acima/abaixo do fechamento de ontem). níveis psicológicos redondos",
+    "Filtro: Daily Factor (corpo de ontem < K do range)",
+    "Stop: Pontos fixos · Alvo: k × range do candle de sinal"
+   ],
+   "studioName": "294_TQS_TEN_UROUND_DIARIO_36",
+   "nOps": 1160,
+   "costPerTrade": 0.5,
+   "totalCosts": 580,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 3.2,
+   "avgMonthly": 90,
+   "posMonths": 22,
+   "curve": [
+    -20,
+    -545,
+    -1057,
+    -1089,
+    -1601,
+    612,
+    100,
+    361,
+    -151,
+    -51,
+    -563,
+    -1076,
+    -893,
+    -124,
+    -365,
+    -1213,
+    -854,
+    -1367,
+    -1928,
+    -1128,
+    -145,
+    -658,
+    408,
+    411,
+    -257,
+    -770,
+    330,
+    1120,
+    608,
+    1524,
+    2405,
+    2958,
+    2446,
+    3269,
+    2757,
+    4732,
+    5538,
+    6219,
+    5707,
+    7061,
+    6549,
+    7147,
+    8835,
+    8322,
+    11293,
+    13463,
+    15142,
+    14957
+   ]
+  },
+  {
+   "id": 255,
+   "name": "TQL_295",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Pullback",
+   "dir": "both",
+   "desc": [
+    "Gatilho: N fechamentos contra a tendência",
+    "Stop: Extremo oposto do candle de sinal · Alvo: k × range do candle de sinal",
+    "Trailing: Trailing em pontos (máx/mín desde a entrada − P) · atualiza no fechamento do candle"
+   ],
+   "studioName": "295_TQS_PUL_PULLBACKBARS_240M_24",
+   "nOps": 287,
+   "costPerTrade": 0.5,
+   "totalCosts": 144,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 25.1,
+   "avgMonthly": 48,
+   "posMonths": 33,
+   "curve": [
+    0,
+    -77,
+    -43,
+    -238,
+    -326,
+    -477,
+    140,
+    343,
+    145,
+    365,
+    832,
+    1890,
+    1853,
+    2251,
+    2109,
+    2081,
+    1671,
+    1312,
+    1307,
+    1394,
+    1340,
+    888,
+    1570,
+    1182,
+    1744,
+    2025,
+    2102,
+    3114,
+    3215,
+    3677,
+    3162,
+    3447,
+    4887,
+    4926,
+    5115,
+    4861,
+    4701,
+    5192,
+    5509,
+    5674,
+    5734,
+    5801,
+    5754,
+    6016,
+    7470,
+    6788,
+    7970,
+    8681,
+    7881
+   ]
+  },
+  {
+   "id": 252,
+   "name": "TQL_297",
+   "createdAt": "2026-10-11",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Pullback",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Toque e rejeição da média rápida a favor da tendência",
+    "Filtro: KAMA inclinada a favor",
+    "Stop: Pontos fixos · Alvo: k × ATR",
+    "Trailing: Trailing k × ATR (máx/mín desde a entrada − k·ATR) · atualiza no fechamento do candle"
+   ],
+   "studioName": "297_TQS_PUL_MAPULLBACK_240M_10",
+   "nOps": 1066,
+   "costPerTrade": 0.5,
+   "totalCosts": 533,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 28.3,
+   "avgMonthly": 81,
+   "posMonths": 42,
+   "curve": [
+    33,
+    -248,
+    465,
+    -103,
+    -376,
+    -244,
+    -622,
+    -448,
+    -694,
+    -829,
+    -365,
+    379,
+    23,
+    149,
+    32,
+    101,
+    -284,
+    26,
+    231,
+    995,
+    1267,
+    1317,
+    1683,
+    1880,
+    6384,
+    5837,
+    6735,
+    7279,
+    7154,
+    7026,
+    7120,
+    7258,
+    6513,
+    7391,
+    7723,
+    7370,
+    8379,
+    7488,
+    7900,
+    7978,
+    7911,
+    8584,
+    8164,
+    8912,
+    9762,
+    10211,
+    9806,
+    13309
+   ]
+  },
+  {
+   "id": 251,
+   "name": "TQL_298",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "Renko 31R",
+   "mode": "day",
+   "motor": "Reversão",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Divergência de IFR (nova mínima sem nova mínima do IFR)",
+    "Filtro: Só num dia da semana (viés semanal)",
+    "Filtro: Range de ontem não extremo",
+    "Stop: Pontos fixos · Alvo: Pontos fixos",
+    "Trailing: Trailing k × ATR (máx/mín desde a entrada − k·ATR) · atualiza no fechamento do candle",
+    "Janelas: 10h00 às 12h00 e 15h30 às 17h00 · zeragem 17h00"
+   ],
+   "studioName": "298_TQS_REV_RSIDIV_31R_311",
+   "nOps": 763,
+   "costPerTrade": 0.5,
+   "totalCosts": 382,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 68.9,
+   "avgMonthly": 56,
+   "posMonths": 68,
+   "curve": [
+    1,
+    85,
+    274,
+    442,
+    518,
+    692,
+    1031,
+    1187,
+    1100,
+    1088,
+    1315,
+    1525,
+    1578,
+    1551,
+    1740,
+    1800,
+    1859,
+    2306,
+    2767,
+    3078,
+    3308,
+    3758,
+    3922,
+    3919,
+    4066,
+    4443,
+    4667,
+    5201,
+    5547,
+    5624,
+    5614,
+    5538,
+    6020,
+    6345,
+    6602,
+    6975,
+    7147,
+    7271,
+    7434,
+    7824,
+    8072,
+    8216,
+    8506,
+    8646,
+    8802,
+    9254,
+    9293,
+    9304,
+    9267
+   ]
+  },
+  {
+   "id": 250,
+   "name": "TQL_299",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Preço cruza a KAMA (média adaptativa)",
+    "Stop: Pontos fixos · Alvo: k × ATR"
+   ],
+   "studioName": "299_TQS_TEN_KAMACROSS_240M_20",
+   "nOps": 614,
+   "costPerTrade": 0.5,
+   "totalCosts": 307,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 44,
+   "avgMonthly": 139,
+   "posMonths": 43,
+   "curve": [
+    -100,
+    -459,
+    -308,
+    -444,
+    -852,
+    -1186,
+    1154,
+    2458,
+    2705,
+    2230,
+    2469,
+    2958,
+    2636,
+    2495,
+    3176,
+    3048,
+    4072,
+    4400,
+    5944,
+    4773,
+    5849,
+    5612,
+    7759,
+    8026,
+    13979,
+    14015,
+    16433,
+    17273,
+    16506,
+    17299,
+    16340,
+    15315,
+    16732,
+    17366,
+    18745,
+    19459,
+    20667,
+    20720,
+    19779,
+    19363,
+    18447,
+    19823,
+    19533,
+    21106,
+    20297,
+    22100,
+    22844,
+    23308,
+    23107
+   ]
+  },
+  {
+   "id": 249,
+   "name": "TQL_300",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "Diário",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "long",
+   "desc": [
+    "Gatilho: Números redondos (stop no múltiplo de S acima/abaixo do fechamento de ontem). níveis psicológicos redondos",
+    "Filtro: OBV acima da sua média (fluxo a favor)",
+    "Stop: Pontos fixos · sem alvo fixo",
+    "Trailing: Trailing k × ATR (máx/mín desde a entrada − k·ATR) · atualiza no fechamento do candle"
+   ],
+   "studioName": "300_TQS_TEN_UROUND_DIARIO_39",
+   "nOps": 944,
+   "costPerTrade": 0.5,
+   "totalCosts": 472,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 3.9,
+   "avgMonthly": 64,
+   "posMonths": 20,
+   "curve": [
+    -20,
+    -430,
+    -866,
+    -1276,
+    -950,
+    140,
+    -270,
+    1015,
+    605,
+    1429,
+    1868,
+    1427,
+    -227,
+    92,
+    511,
+    101,
+    -9,
+    315,
+    -95,
+    86,
+    1069,
+    659,
+    249,
+    767,
+    -133,
+    1186,
+    727,
+    317,
+    857,
+    447,
+    1104,
+    1276,
+    1436,
+    1026,
+    3574,
+    3164,
+    2754,
+    5084,
+    6269,
+    5718,
+    7527,
+    8374,
+    7964,
+    8032,
+    9124,
+    8714,
+    8109,
+    10455,
+    10393
+   ]
+  },
+  {
+   "id": 247,
+   "name": "TQL_301",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "Diário",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "long",
+   "desc": [
+    "Gatilho: Números redondos (stop no múltiplo de S acima/abaixo do fechamento de ontem). níveis psicológicos redondos",
+    "Filtro: Dia anterior a favor",
+    "Filtro: TRIX a favor (acima/abaixo de zero)",
+    "Stop: Volta à abertura do dia (rompimento falhado) · Alvo: k × ATR",
+    "Trailing: Trailing k × ATR (máx/mín desde a entrada − k·ATR) · atualiza no fechamento do candle"
+   ],
+   "studioName": "301_TQS_TEN_UROUND_DIARIO_38",
+   "nOps": 265,
+   "costPerTrade": 0.5,
+   "totalCosts": 133,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 31.7,
+   "avgMonthly": 67,
+   "posMonths": 22,
+   "curve": [
+    -30,
+    -725,
+    56,
+    661,
+    528,
+    734,
+    830,
+    611,
+    693,
+    978,
+    384,
+    635,
+    -24,
+    -444,
+    757,
+    1532,
+    1315,
+    2016,
+    2295,
+    3084,
+    3594,
+    2999,
+    4510,
+    3744,
+    4362,
+    4785,
+    5777,
+    6142,
+    6850,
+    5961,
+    7355,
+    7558,
+    7081,
+    6323,
+    7262,
+    7888,
+    8155,
+    7734,
+    8404,
+    10888,
+    12420,
+    11764,
+    10456,
+    11676,
+    10920
+   ]
+  },
+  {
+   "id": 242,
+   "name": "TQL_302",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "long",
+   "desc": [
+    "Gatilho: Virada do HiLo (média das máx/mín). Krausz / HiLo Activator",
+    "Stop: Pontos fixos · Alvo: k × ATR"
+   ],
+   "studioName": "302_TQS_TEN_HILOCROSS_240M_22",
+   "nOps": 486,
+   "costPerTrade": 0.5,
+   "totalCosts": 243,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 32.9,
+   "avgMonthly": 58,
+   "posMonths": 27,
+   "curve": [
+    -40,
+    149,
+    347,
+    -212,
+    239,
+    596,
+    307,
+    455,
+    172,
+    -126,
+    47,
+    697,
+    947,
+    1770,
+    1423,
+    1437,
+    1096,
+    1566,
+    2994,
+    2660,
+    3996,
+    3673,
+    4593,
+    3947,
+    4856,
+    4488,
+    5440,
+    5199,
+    4907,
+    4584,
+    5068,
+    4868,
+    7030,
+    7640,
+    8274,
+    8022,
+    8491,
+    8179,
+    7617,
+    9275,
+    8785,
+    8503,
+    8905,
+    10079,
+    9630,
+    9630
+   ]
+  },
+  {
+   "id": 240,
+   "name": "TQL_303",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "long",
+   "desc": [
+    "Gatilho: Saída de congestão com envelope de Joe Ross. Joe Ross via Noronha (O Jogo do Mercado)",
+    "Stop: Pontos fixos · Alvo: k × ATR"
+   ],
+   "studioName": "303_TQS_TEN_ROSSBREAK_240M_26",
+   "nOps": 292,
+   "costPerTrade": 0.5,
+   "totalCosts": 146,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 48.3,
+   "avgMonthly": 66,
+   "posMonths": 40,
+   "curve": [
+    1,
+    -158,
+    -478,
+    -31,
+    467,
+    543,
+    694,
+    730,
+    2283,
+    2473,
+    2938,
+    2982,
+    3312,
+    3962,
+    4644,
+    5699,
+    5362,
+    5552,
+    6106,
+    5769,
+    5340,
+    5849,
+    6537,
+    6236,
+    7035,
+    7246,
+    6926,
+    7339,
+    7584,
+    7263,
+    7826,
+    9276,
+    10549,
+    10279,
+    11002,
+    10762,
+    10651,
+    10940,
+    10539,
+    10849,
+    11399,
+    11078,
+    10837
+   ]
+  },
+  {
+   "id": 239,
+   "name": "TQL_304",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Pullback",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Bollinger %b baixo dentro da tendência",
+    "Filtro: Não perseguir: preço ainda dentro da STARC",
+    "Stop: k × ATR · Alvo: Pontos fixos",
+    "Trailing: Trailing em pontos (máx/mín desde a entrada − P) · atualiza no fechamento do candle"
+   ],
+   "studioName": "304_TQS_PUL_PCTBTREND_240M_25",
+   "nOps": 341,
+   "costPerTrade": 0.5,
+   "totalCosts": 171,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 31.4,
+   "avgMonthly": 41,
+   "posMonths": 43,
+   "curve": [
+    0,
+    100,
+    80,
+    262,
+    -198,
+    170,
+    -87,
+    613,
+    539,
+    972,
+    1370,
+    1876,
+    1872,
+    2040,
+    321,
+    770,
+    984,
+    608,
+    756,
+    326,
+    806,
+    1192,
+    1698,
+    1821,
+    2078,
+    2414,
+    2945,
+    3181,
+    3082,
+    3556,
+    4232,
+    4908,
+    5074,
+    5418,
+    5754,
+    5500,
+    6006,
+    6024,
+    5806,
+    6312,
+    6512,
+    6557,
+    6223,
+    6781
+   ]
+  },
+  {
+   "id": 238,
+   "name": "TQL_305",
+   "createdAt": "2026-10-11",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Ordem stop na máx/mín dos últimos N dias. rompimento da máx/mín da semana",
+    "Filtro: ADX abaixo (lateral; também breakout depois de calmaria)",
+    "Stop: k × ATR · Alvo: Pontos fixos"
+   ],
+   "studioName": "305_TQS_TEN_UNDAYS_240M_15",
+   "nOps": 331,
+   "costPerTrade": 0.5,
+   "totalCosts": 166,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 84,
+   "avgMonthly": 16,
+   "posMonths": 57,
+   "curve": [
+    -213,
+    -355,
+    -824,
+    -408,
+    -554,
+    -643,
+    -534,
+    -565,
+    -770,
+    -1246,
+    -813,
+    -1066,
+    -606,
+    -678,
+    -789,
+    -728,
+    -897,
+    -1927,
+    -2559,
+    -2775,
+    -2338,
+    -2415,
+    -3346,
+    -2930,
+    -2513,
+    -2521,
+    -2405,
+    -2511,
+    -2644,
+    -1247,
+    -830,
+    -845,
+    -967,
+    -551,
+    321,
+    782,
+    413,
+    829,
+    822,
+    942,
+    592,
+    561,
+    1004,
+    1420,
+    2089,
+    2052,
+    2469,
+    2526,
+    2586
+   ]
+  },
+  {
+   "id": 237,
+   "name": "TQL_306",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "Renko 31R",
+   "mode": "day",
+   "motor": "Reversão",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Williams %R em extremo",
+    "Filtro: Só num dia da semana (viés semanal)",
+    "Filtro: Estocástico na zona de pré-sinal (filtro de candle de Morris)",
+    "Stop: Pontos fixos · Alvo: Pontos fixos",
+    "Janelas: 10h00 às 13h00 e 15h30 às 17h00 · zeragem 17h40"
+   ],
+   "studioName": "306_TQS_REV_WREXTREME_31R_38",
+   "nOps": 1262,
+   "costPerTrade": 0.5,
+   "totalCosts": 631,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 59.7,
+   "avgMonthly": 90,
+   "posMonths": 61,
+   "curve": [
+    1,
+    519,
+    1185,
+    1411,
+    1572,
+    1879,
+    2026,
+    1893,
+    2319,
+    2399,
+    2770,
+    3100,
+    3267,
+    3775,
+    4196,
+    4765,
+    4847,
+    4830,
+    4657,
+    4842,
+    5351,
+    5410,
+    6009,
+    6381,
+    6491,
+    7088,
+    7297,
+    8036,
+    8256,
+    9058,
+    8748,
+    9546,
+    9523,
+    9532,
+    9771,
+    9589,
+    10057,
+    10725,
+    11177,
+    12028,
+    12404,
+    13015,
+    13436,
+    14045,
+    14403,
+    14410,
+    14582,
+    14881
+   ]
+  },
+  {
+   "id": 236,
+   "name": "TQL_307",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "Renko 31R",
+   "mode": "day",
+   "motor": "Reversão",
+   "dir": "both",
+   "desc": [
+    "Gatilho: Williams %R em extremo",
+    "Filtro: Só num dia da semana (viés semanal)",
+    "Filtro: Estocástico na zona de pré-sinal (filtro de candle de Morris)",
+    "Stop: Pontos fixos · Alvo: Pontos fixos",
+    "Janelas: 10h00 às 13h00 e 15h30 às 17h00 · zeragem 17h40"
+   ],
+   "studioName": "307_TQS_REV_WREXTREME_31R_39",
+   "nOps": 1292,
+   "costPerTrade": 0.5,
+   "totalCosts": 646,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 59.8,
+   "avgMonthly": 93,
+   "posMonths": 63,
+   "curve": [
+    1,
+    505,
+    1036,
+    1432,
+    1738,
+    2024,
+    2193,
+    2199,
+    2509,
+    2684,
+    3076,
+    3045,
+    3340,
+    4039,
+    4439,
+    4880,
+    5069,
+    4803,
+    4751,
+    4936,
+    5344,
+    5695,
+    5781,
+    6430,
+    6402,
+    6793,
+    7221,
+    7967,
+    8367,
+    8926,
+    9252,
+    9299,
+    9686,
+    9761,
+    9905,
+    10129,
+    10123,
+    10682,
+    11393,
+    11865,
+    12526,
+    12943,
+    13534,
+    13975,
+    14543,
+    14751,
+    14887,
+    15079,
+    15359
+   ]
+  },
+  {
+   "id": 235,
+   "name": "TQL_308",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "Diário",
+   "mode": "swing",
+   "motor": "Tendência",
+   "dir": "both",
+   "desc": [
+    "Stop: Pontos fixos · Alvo: k × range do candle de sinal",
+    "Trailing: Trailing k × ATR (máx/mín desde a entrada − k·ATR) · liga desde a entrada · atualiza no fechamento do candle"
+   ],
+   "studioName": "308_TQS_TEN_NR7_DIARIO_310",
+   "nOps": 284,
+   "costPerTrade": 0.5,
+   "totalCosts": 142,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 26.4,
+   "avgMonthly": 28,
+   "posMonths": 21,
+   "curve": [
+    1,
+    -234,
+    43,
+    -309,
+    -207,
+    -498,
+    -492,
+    -454,
+    -806,
+    -553,
+    -976,
+    -1376,
+    -1520,
+    -1825,
+    -2177,
+    -2031,
+    -2383,
+    -2664,
+    -2614,
+    -2966,
+    -1611,
+    -1892,
+    -1434,
+    -1644,
+    -1700,
+    -1433,
+    -1167,
+    -1590,
+    -1947,
+    -1334,
+    -1686,
+    -1025,
+    -150,
+    -360,
+    -783,
+    -1183,
+    -1606,
+    -192,
+    1169,
+    2033,
+    3053,
+    2701,
+    3499,
+    4302,
+    3908,
+    5522,
+    5099,
+    4676,
+    4605
+   ]
+  },
+  {
+   "id": 248,
+   "name": "TQL_310",
+   "createdAt": "2026-10-12",
+   "ativo": "WIN",
+   "timeframe": "240 min",
+   "mode": "swing",
+   "motor": "Pullback",
+   "dir": "long",
+   "desc": [
+    "Gatilho: Pullback na VWAP com dia direcional. day trade institucional",
+    "Filtro: Não perseguir: preço ainda dentro da STARC",
+    "Filtro: Dia anterior a favor",
+    "Filtro: ADX acima (mercado tendencial)",
+    "Stop: Pontos fixos · Alvo: k × ATR",
+    "Trailing: Trailing na mín/máx dos últimos N candles · atualiza no fechamento do candle"
+   ],
+   "studioName": "310_TQS_PUL_VWAPPULLBACK_240M_23",
+   "nOps": 212,
+   "costPerTrade": 0.5,
+   "totalCosts": 106,
+   "costSource": "studio",
+   "since": "2013",
+   "winRate": 24.1,
+   "avgMonthly": 53,
+   "posMonths": 14,
+   "curve": [
+    -20,
+    -102,
+    -162,
+    211,
+    130,
+    361,
+    1367,
+    1259,
+    1199,
+    1783,
+    1614,
+    1699,
+    1743,
+    1598,
+    1559,
+    2028,
+    1968,
+    1886,
+    1784,
+    3520,
+    3439,
+    3336,
+    4313,
+    4210,
+    4112,
+    4050,
+    3948,
+    3845,
+    3740,
+    3637,
+    4484,
+    4456,
+    4383,
+    4343,
+    5196,
+    5114,
+    4981,
+    4899,
+    4802,
+    5565,
+    5463,
+    5302,
+    8803,
+    8782
    ]
   },
   {
