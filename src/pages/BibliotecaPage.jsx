@@ -12,8 +12,8 @@ const OFERTA = {
   meses: 3,
   garantiaDias: 30,
   opcoes: [
-    { key: 'padrao', label: 'Trimestral', price: 997, checkout: null },
-    { key: 'avel', label: 'Clientes Avel', price: 697.90, checkout: null, note: '30% de desconto para quem é cliente Avel' },
+    { key: 'padrao', label: 'Trimestral', price: 997, checkout: 'https://payfast.greenn.com.br/188665/offer/gdGsE7' },
+    { key: 'avel', label: 'Clientes Avel', price: 697.90, checkout: 'https://payfast.greenn.com.br/188665/offer/gdGsE7?cupom=AVEL30', note: '30% de desconto para quem é cliente Avel' },
   ],
 }
 const PERKS = [
