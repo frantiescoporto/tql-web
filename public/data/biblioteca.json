@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-22T06:07:42.066Z",
+ "generatedAt": "2026-10-30T21:54:06.763Z",
  "combined": [
   {
    "m": "2012-04",
@@ -4159,18 +4159,18 @@
   {
    "id": 282,
    "name": "TQL_275",
-   "createdAt": "2026-10-12",
+   "createdAt": null,
    "ativo": "WIN",
-   "timeframe": "Renko 15R",
+   "timeframe": "15R",
    "mode": "day",
    "motor": "Momentum",
-   "dir": "both",
+   "dir": null,
    "desc": [
     "Gatilho: Barra larga fechando na ponta (continuação)",
     "Stop: k × ATR · Alvo: Pontos fixos",
     "Janelas: 10h00 às 13h00 e 16h00 às 17h45 · zeragem 17h00"
    ],
-   "studioName": "275_TQS_MOM_BIGBARCONT_15R_11",
+   "studioName": null,
    "nOps": 1590,
    "costPerTrade": 0.5,
    "totalCosts": 795,
