@@ -1,0 +1,36 @@
+name: Atualizar Biblioteca TQL
+
+# A cada push na main que muda os dados dos robôs, recalcula as métricas e
+# atualiza a Biblioteca (biblioteca.tradequantlab.com.br). Também pode ser
+# disparado à mão na aba Actions.
+on:
+  push:
+    branches: [main]
+    paths:
+      - public/data/biblioteca.json
+      - public/data/robots.json
+      - scripts/sync-biblioteca.mjs
+      - .github/workflows/sync-biblioteca.yml
+  workflow_dispatch:
+
+concurrency:
+  group: sync-biblioteca
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Enviar dados dos robôs
+        run: node scripts/sync-biblioteca.mjs
+        env:
+          BIBLIOTECA_SYNC_URL: ${{ secrets.BIBLIOTECA_SYNC_URL }}
+          BIBLIOTECA_SYNC_TOKEN: ${{ secrets.BIBLIOTECA_SYNC_TOKEN }}
