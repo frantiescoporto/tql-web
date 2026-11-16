@@ -7,8 +7,8 @@
  * 1 contrato (mesmo cálculo do site) e manda para a função sync-robots do Supabase.
  *
  * Variáveis de ambiente:
- *   BIBLIOTECA_SYNC_URL    https://<projeto>.supabase.co/functions/v1/sync-robots
- *   BIBLIOTECA_SYNC_TOKEN  segredo combinado com a função
+ *   BIBLIOTECA_SYNC_TOKEN  segredo combinado com a função (obrigatório)
+ *   BIBLIOTECA_SYNC_URL    opcional, só para apontar para outro projeto
  *
  * Só conferir, sem enviar nada:  node scripts/sync-biblioteca.mjs --dry
  */
@@ -91,15 +91,28 @@ console.log(`${robots.length} robôs, ${backtest.length} operações de backtest
 if (!robots.length) { console.error('Nenhum robô encontrado em public/data: nada enviado.'); process.exit(1) }
 if (dry) process.exit(0)
 
-const url = process.env.BIBLIOTECA_SYNC_URL
-const token = process.env.BIBLIOTECA_SYNC_TOKEN
-if (!url || !token) { console.error('Faltam BIBLIOTECA_SYNC_URL e BIBLIOTECA_SYNC_TOKEN.'); process.exit(1) }
+// O endereço não é segredo: fica fixo aqui. BIBLIOTECA_SYNC_URL só serve para apontar para outro projeto.
+const URL_PADRAO = 'https://nffkrtqleszodqgaenil.supabase.co/functions/v1/sync-robots'
+const informado = (process.env.BIBLIOTECA_SYNC_URL || '').trim()
+const url = /^https:\/\/\S+$/.test(informado) ? informado : URL_PADRAO
+if (informado && url !== informado) console.warn('BIBLIOTECA_SYNC_URL não é um endereço https válido: usando o endereço padrão.')
+const token = (process.env.BIBLIOTECA_SYNC_TOKEN || '').trim()
+if (!token) { console.error('Falta o segredo BIBLIOTECA_SYNC_TOKEN.'); process.exit(1) }
+if (/\s/.test(token)) { console.error('BIBLIOTECA_SYNC_TOKEN tem espaço ou quebra de linha no meio: cole só a sequência do token.'); process.exit(1) }
 
-const res = await fetch(url, {
+const post = body => fetch(url, {
   method: 'POST',
   headers: { 'content-type': 'application/json', 'x-sync-token': token },
-  body: JSON.stringify({ robots, backtest, backtest_desde: BACKTEST_DESDE }),
+  body: JSON.stringify(body),
+  signal: AbortSignal.timeout(120000),
 })
+
+// Confere o token com um envio vazio antes de mandar os dados (um envio grande recusado pode travar).
+const teste = await post({})
+if (teste.status === 401) { console.error('Token recusado (401): o segredo BIBLIOTECA_SYNC_TOKEN não confere com o do Supabase.'); process.exit(1) }
+await teste.text()
+
+const res = await post({ robots, backtest, backtest_desde: BACKTEST_DESDE })
 const text = await res.text()
 if (!res.ok) { console.error(`Falhou (${res.status}): ${text}`); process.exit(1) }
 console.log('Biblioteca atualizada:', text)
